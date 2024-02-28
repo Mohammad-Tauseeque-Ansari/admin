@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule ,FormsModule } from '@angular/forms';
 
 // CoreUI Modules
 import {
@@ -13,7 +13,7 @@ import {
   CollapseModule,
   DropdownModule,
   FormModule,
-  GridModule,
+   GridModule,
   ListGroupModule,
   NavModule,
   PaginationModule,
@@ -77,7 +77,7 @@ import { BaseRoutingModule } from './base-routing.module';
     TooltipModule,
     CarouselModule,
     FormModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule,FormsModule,
     DropdownModule,
     PaginationModule,
     PopoverModule,

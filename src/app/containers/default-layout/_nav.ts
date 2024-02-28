@@ -1,3 +1,4 @@
+import { ViewChildren } from '@angular/core';
 import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
@@ -20,7 +21,7 @@ export const navItems: INavData[] = [
   //   title: true
   // },
   {
-    name: 'Create Master',
+    name: 'Master',
     url: '/base',
     iconComponent: { name: 'cil-puzzle' },
     children: [
@@ -28,6 +29,7 @@ export const navItems: INavData[] = [
         name: 'Accordion',
         url: '/base/accordion'
       },
+      
       {
         name: 'Breadcrumbs',
         url: '/base/breadcrumbs'

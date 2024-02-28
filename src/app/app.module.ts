@@ -3,6 +3,8 @@ import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@a
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
@@ -24,7 +26,7 @@ import {
   CardModule,
   DropdownModule,
   FooterModule,
-  FormModule,
+  // FormModule,
   GridModule,
   HeaderModule,
   ListGroupModule,
@@ -32,6 +34,7 @@ import {
   ProgressModule,
   SharedModule,
   SidebarModule,
+  FormModule,
   TabsModule,
   UtilitiesModule
 } from '@coreui/angular';
@@ -64,6 +67,7 @@ const APP_CONTAINERS = [
     UtilitiesModule,
     ButtonGroupModule,
     ReactiveFormsModule,
+    FormsModule,
     SidebarModule,
     SharedModule,
     TabsModule,

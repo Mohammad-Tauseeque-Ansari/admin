@@ -1,121 +1,192 @@
-<c-row ngPreserveWhitespaces>
-  <c-col xs="12">
-    <app-docs-callout href="components/accordion" name="Accordion"></app-docs-callout>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header>
-        <strong>Angular Accordion</strong>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Click the accordions below to expand/collapse the accordion content.
-        </p>
-        <app-docs-example href="components/accordion">
-          <c-accordion [alwaysOpen]="false" [flush]="false" class="shadow rounded-2">
-            <c-accordion-item #item0="cAccordionItem" [visible]="false">
-              <ng-template cTemplateId="accordionHeaderTemplate">
-                <button (click)="item0.toggleItem()" [collapsed]="!item0.visible" cAccordionButton cBgColor="info">
-                  Accordion item #0
-                </button>
-              </ng-template>
-              <ng-template cTemplateId="accordionBodyTemplate">
-                <div [innerHTML]="getAccordionBodyText('first')" cBgColor="info" class="accordion-body"></div>
-              </ng-template>
-            </c-accordion-item>
-            <c-accordion-item #item1="cAccordionItem" [visible]="false">
-              <ng-template cTemplateId="accordionHeaderTemplate">
-                <button (click)="item1.toggleItem()" [collapsed]="!item1.visible" cAccordionButton>
-                  Accordion item #1
-                </button>
-              </ng-template>
-              <ng-template cTemplateId="accordionBodyTemplate">
-                <div class="accordion-body">
-                  <strong>This is the
-                    <mark>#second</mark>
-                    item accordion body.</strong> It is hidden by
-                  default, until the collapse plugin adds the appropriate classes that we use to
-                  style each element. These classes control the overall appearance, as well as
-                  the showing and hiding via CSS transitions. You can modify any of this with
-                  custom CSS or overriding our default variables. It&#39;s also worth noting
-                  that just about any HTML can go within the <code>.accordion-body</code>,
-                  though the transition does limit overflow.
-                </div>
-              </ng-template>
-            </c-accordion-item>
-            <c-accordion-item #item2="cAccordionItem" [visible]="false">
-              <ng-template cTemplateId="accordionHeaderTemplate">
-                <button (click)="item2.toggleItem()" [collapsed]="!item2.visible" cAccordionButton>
-                  Accordion item #2
-                </button>
-              </ng-template>
-              <ng-template cTemplateId="accordionBodyTemplate">
-                <div class="accordion-body">
-                  <span [innerHTML]="getAccordionBodyText('third')"></span>
-                </div>
-              </ng-template>
-            </c-accordion-item>
-          </c-accordion>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-    <c-card class="mb-4">
-      <c-card-header>
-        <strong>Angular Accordion</strong> flush
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Click the accordions below to expand/collapse the accordion content.
-        </p>
-        <app-docs-example href="components/accordion#flush">
-          <c-accordion [flush]="true">
-            <c-accordion-item visible>
-              <ng-template cTemplateId="accordionHeader">
-                Accordion item #0
-              </ng-template>
-              <ng-template cTemplateId="accordionBody">
-                <span [innerHTML]="getAccordionBodyText('first')"></span>
-              </ng-template>
-            </c-accordion-item>
-            <c-accordion-item [visible]="false">
-              <ng-template cTemplateId="accordionHeader">
-                Accordion item #1
-              </ng-template>
-              <ng-template cTemplateId="accordionBody">
-                <span [innerHTML]="getAccordionBodyText('second')"></span>
-              </ng-template>
-            </c-accordion-item>
-            <c-accordion-item [visible]="false">
-              <ng-template cTemplateId="accordionHeader">
-                Accordion item #2
-              </ng-template>
-              <ng-template cTemplateId="accordionBody">
-                <span [innerHTML]="getAccordionBodyText('third')"></span>
-              </ng-template>
-            </c-accordion-item>
-          </c-accordion>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-    <c-card class="mb-4">
-      <c-card-header>
-        <strong>Angular Accordion</strong> alwaysOpen
-      </c-card-header>
-      <c-card-body>
-        <app-docs-example href="components/accordion#always-open">
-          <c-accordion [alwaysOpen]="true" class="shadow accordion-custom rounded-2">
-            <c-accordion-item *ngFor="let item of items; let i = index;" [visible]="i===1">
-              <ng-template cTemplateId="accordionHeader">
-                Custom Accordion item #{{i}}
-              </ng-template>
-              <ng-template cTemplateId="accordionBody">
-                <small><i>{{i}}.</i></small>
-                <span [innerHTML]="getAccordionBodyText(i.toString())"></span>
-              </ng-template>
-            </c-accordion-item>
-          </c-accordion>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-</c-row>
+<nav class="navbar navbar-light">
+  <div class="container">
+    
+    <div class="d-flex">
+      <button (click)="onAddEmployee()" class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Company</button>
+    </div>
+
+  </div>
+
+</nav>
+
+<div class="main">
+  <section class="dashboard mt-3">
+    <div class="container">
+      <table class="table table-responsive table-bordered ">
+        <thead>
+          <tr class="table-dark">
+            <th>SrNo.</th>
+            <th>Company Name	</th>
+            <th>Last Name</th>
+            <th>Address1</th>
+            <th>Address2</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>Mobile</th>
+            <th>FaxNo.</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-striped"  >
+            <td>1</td>
+            <td>XYZ</td>
+            <td>ABC</td>
+            <td>a@b.com</td>
+            <td>abc</td>
+            <td>87000</td>
+            <td>Maharashtra</td>
+            <td>8888999999</td>
+            <td>123</td>
+            <td>
+              <button class="btn btn-sm btn-success ">Edit</button>
+            </td>
+            <!-- <td class="text-center" *ngFor="let emp of employeeData">
+              <button (click)="onEdit(emp)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="btn btn-sm btn-outline-dark">Edit</button>
+              <button (click)="deleteEmployee(emp)" class="btn btn-sm btn-outline-danger mx-2">Delete</button>
+            </td> -->
+          </tr>
+  
+        </tbody>
+      </table>
+    </div>
+  
+  </section>
+</div>
+
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"> <!-- Use modal-lg class to make the modal larger -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Company</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="companyName" class="form-label">Company Name  :</label>
+                <input type="text" class="form-control rounded-0" id="companyName" name="companyName">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="industry" class="form-label">Address1 :</label>
+                <input type="text" class="form-control rounded-0" id="address1" name="industry">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="location" class="form-label">Address2</label>
+                <input type="text" class="form-control rounded-0" id="address2" name="location">
+              </div>
+            </div>
+          </div>
+          <!-- Add similar rows and columns as needed for additional fields -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="location" class="form-label">Address3 :</label>
+                <input type="text" class="form-control rounded-0" id="address3" name="location">
+              </div>
+            </div>  
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="country" class="form-label">Select Country :</label>
+                <select class="form-select rounded-0" id="country" name="country" [(ngModel)]="selectedCountry" (change)="onCountryChange(selectedCountry)">
+                  <option value="" selected disabled>Select Country</option>
+                  <option *ngFor="let country of countryData" [value]="country">{{ country.country }}</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="state" class="form-label">Select State :</label>
+                <select class="form-select rounded-0" id="state" name="state">
+                  <option value="" selected disabled>Select State</option>
+                  <option *ngFor="let state of selectedCountry?.states" [value]="state">{{ state }}</option>
+                </select>
+              </div>
+            </div>
+            
+              
+         </div>
+         <div class="row">
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="companyName" class="form-label">Select City :</label>
+              <input type="text" class="form-control rounded-0" id="city" name="companyName">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="industry" class="form-label">Tax ID1 :</label>
+              <input type="text" class="form-control rounded-0" id="taxid1" name="industry">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="industry" class="form-label">Tax ID2 :</label>
+              <input type="text" class="form-control rounded-0" id="taxid2" name="industry">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="industry" class="form-label">Phone No. :</label>
+              <input type="text" class="form-control rounded-0" id="phone" name="industry">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="industry" class="form-label">Mobile No. :</label>
+              <input type="text" class="form-control rounded-0" id="mobile" name="industry">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="location" class="form-label">FAX Number :</label>
+              <input type="text" class="form-control rounded-0" id="address2" name="location">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="companyName" class="form-label">Email Id :</label>
+              <input type="email" class="form-control rounded-0" id="email" name="companyName">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="industry" class="form-label">Website :</label>
+              <input type="text" class="form-control rounded-0" id="website" name="industry">
+            </div>
+          </div>
+         
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark text-white">Add Company</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+ 

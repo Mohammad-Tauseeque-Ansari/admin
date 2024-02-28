@@ -29,6 +29,50 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: 'cards',
       },
+      // new
+      // {
+      //   path: 'accordion',
+      //   component: AccordionsComponent,
+      //   children: [
+      //     {
+      //       path: 'accordion',
+      //       component: AccordionsComponent,
+      //     },
+      //     {
+      //       path: 'breadcrumbs',
+      //       component: BreadcrumbsComponent,
+      //     }
+      //   ]
+      // },
+      // {
+      //   path: 'accordion',
+      //   component: AccordionsComponent,
+      //   children: [
+      //     {
+      //       path: 'cards',
+      //       component: CardsComponent,
+      //     },
+      //     {
+      //       path: 'carousel',
+      //       component: CarouselsComponent,
+      //     }
+      //   ]
+      // },
+      // {
+      //   path: 'breadcrumbs',
+      //   component: BreadcrumbsComponent,
+      //   children: [
+      //     {
+      //       path: 'collapse',
+      //       component: CollapsesComponent,
+      //     },
+      //     {
+      //       path: 'list-group',
+      //       component: ListGroupsComponent,
+      //     }
+      //   ]
+      // },
+      // old
       {
         path: 'accordion',
         component: AccordionsComponent,
@@ -142,5 +186,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class BaseRoutingModule {}
+export class BaseRoutingModule { }
 
