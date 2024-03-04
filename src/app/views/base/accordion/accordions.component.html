@@ -2,7 +2,7 @@
   <div class="container">
     
     <div class="d-flex">
-      <button (click)="onAddEmployee()" class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Company</button>
+      <button (click)="onAddEmployee()" class="btn btn-dark btn-no-border" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Company</button>
     </div>
 
   </div>
@@ -17,29 +17,35 @@
           <tr class="table-dark">
             <th>SrNo.</th>
             <th>Company Name	</th>
-            <th>Last Name</th>
             <th>Address1</th>
             <th>Address2</th>
+            <th>Address3</th>
             <th>Country</th>
             <th>State</th>
+            <th>City</th>
             <th>Mobile</th>
             <th>FaxNo.</th>
             <th class="text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="table-striped"  >
-            <td>1</td>
-            <td>XYZ</td>
-            <td>ABC</td>
-            <td>a@b.com</td>
-            <td>abc</td>
-            <td>87000</td>
-            <td>Maharashtra</td>
-            <td>8888999999</td>
-            <td>123</td>
-            <td>
-              <button class="btn btn-sm btn-success ">Edit</button>
+          <tr class="table-striped" *ngFor="let row of companyData"  >
+            <td>{{row.id}}</td>
+            <td>{{row.companyName}}</td>
+            <td>{{row.address1}}</td>
+            <td>{{row.address2}}</td>
+            <td>{{row.address3}}</td>
+            <td>{{row.country}}</td>
+            <td>{{row.state}}</td>
+            <td>{{row.city}}</td>
+            <td>{{row.phone}}</td>
+            <td>{{row.faxNo}}</td>
+
+           
+            
+            <td class="text-center">
+              <button (click)="onEdit(row)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-sm btn-success mx-1 ">Edit</button>
+
             </td>
             <!-- <td class="text-center" *ngFor="let emp of employeeData">
               <button (click)="onEdit(emp)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -64,31 +70,31 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg"> <!-- Use modal-lg class to make the modal larger -->
+  <div class="modal-dialog modal-xl"> <!-- Use modal-lg class to make the modal larger -->
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add Company</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form [formGroup]="companyForm">
           <div class="row">
             <div class="col-md-4">
               <div class="mb-3">
                 <label for="companyName" class="form-label">Company Name  :</label>
-                <input type="text" class="form-control rounded-0" id="companyName" name="companyName">
+                <input formControlName="companyName" ype="text" class="form-control rounded-0" id="companyName" name="companyName">
               </div>
             </div>
             <div class="col-md-4">
               <div class="mb-3">
                 <label for="industry" class="form-label">Address1 :</label>
-                <input type="text" class="form-control rounded-0" id="address1" name="industry">
+                <input formControlName="address1" type="text" class="form-control rounded-0" id="address1" name="industry">
               </div>
             </div>
             <div class="col-md-4">
               <div class="mb-3">
                 <label for="location" class="form-label">Address2</label>
-                <input type="text" class="form-control rounded-0" id="address2" name="location">
+                <input formControlName="address2" type="text" class="form-control rounded-0" id="address2" name="location">
               </div>
             </div>
           </div>
@@ -97,26 +103,30 @@
             <div class="col-md-4">
               <div class="mb-3">
                 <label for="location" class="form-label">Address3 :</label>
-                <input type="text" class="form-control rounded-0" id="address3" name="location">
+                <input formControlName="address3" type="text" class="form-control rounded-0" id="address3" name="location">
               </div>
             </div>  
             <div class="col-md-4">
               <div class="mb-3">
                 <label for="country" class="form-label">Select Country :</label>
-                <select class="form-select rounded-0" id="country" name="country" [(ngModel)]="selectedCountry" (change)="onCountryChange(selectedCountry)">
+              <input formControlName="country" type="text" class="form-control rounded-0" id="taxid2" name="industry">
+
+                <!-- <select formControlName="country" class="form-select rounded-0" id="country" name="country" [(ngModel)]="selectedCountry" (change)="onCountryChange(selectedCountry)">
                   <option value="" selected disabled>Select Country</option>
                   <option *ngFor="let country of countryData" [value]="country">{{ country.country }}</option>
-                </select>
+                </select> -->
               </div>
             </div>
             
             <div class="col-md-4">
               <div class="mb-3">
                 <label for="state" class="form-label">Select State :</label>
-                <select class="form-select rounded-0" id="state" name="state">
+              <input formControlName="state" type="text" class="form-control rounded-0" id="taxid2" name="industry">
+
+                <!-- <select formControlName="state" class="form-select rounded-0" id="state" name="state">
                   <option value="" selected disabled>Select State</option>
                   <option *ngFor="let state of selectedCountry?.states" [value]="state">{{ state }}</option>
-                </select>
+                </select> -->
               </div>
             </div>
             
@@ -126,19 +136,19 @@
           <div class="col-md-4">
             <div class="mb-3">
               <label for="companyName" class="form-label">Select City :</label>
-              <input type="text" class="form-control rounded-0" id="city" name="companyName">
+              <input formControlName="city" type="text" class="form-control rounded-0" id="city" name="companyName">
             </div>
           </div>
           <div class="col-md-4">
             <div class="mb-3">
               <label for="industry" class="form-label">Tax ID1 :</label>
-              <input type="text" class="form-control rounded-0" id="taxid1" name="industry">
+              <input formControlName="taxId1" type="text" class="form-control rounded-0" id="taxid1" name="industry">
             </div>
           </div>
           <div class="col-md-4">
             <div class="mb-3">
               <label for="industry" class="form-label">Tax ID2 :</label>
-              <input type="text" class="form-control rounded-0" id="taxid2" name="industry">
+              <input formControlName="taxId2" type="text" class="form-control rounded-0" id="taxid2" name="industry">
             </div>
           </div>
         </div>
@@ -146,19 +156,19 @@
           <div class="col-md-4">
             <div class="mb-3">
               <label for="industry" class="form-label">Phone No. :</label>
-              <input type="text" class="form-control rounded-0" id="phone" name="industry">
+              <input formControlName="phone" type="text" class="form-control rounded-0" id="phone" name="industry">
             </div>
           </div>
           <div class="col-md-4">
             <div class="mb-3">
               <label for="industry" class="form-label">Mobile No. :</label>
-              <input type="text" class="form-control rounded-0" id="mobile" name="industry">
+              <input formControlName="mobile" type="text" class="form-control rounded-0" id="mobile" name="industry">
             </div>
           </div>
           <div class="col-md-4">
             <div class="mb-3">
               <label for="location" class="form-label">FAX Number :</label>
-              <input type="text" class="form-control rounded-0" id="address2" name="location">
+              <input formControlName="faxNo" type="text" class="form-control rounded-0" id="address2" name="location">
             </div>
           </div>
         </div>
@@ -166,13 +176,13 @@
           <div class="col-md-4">
             <div class="mb-3">
               <label for="companyName" class="form-label">Email Id :</label>
-              <input type="email" class="form-control rounded-0" id="email" name="companyName">
+              <input formControlName="email" type="email" class="form-control rounded-0" id="email" name="companyName">
             </div>
           </div>
           <div class="col-md-4">
             <div class="mb-3">
               <label for="industry" class="form-label">Website :</label>
-              <input type="text" class="form-control rounded-0" id="website" name="industry">
+              <input formControlName="website" type="text" class="form-control rounded-0" id="website" name="industry">
             </div>
           </div>
          
@@ -180,8 +190,11 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-dark text-white">Add Company</button>
+        <button (click)="onClose()" type="button" id="cancel" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Close</button>
+        <button *ngIf="showAdd" (click)="AddNewCompany()" type="button" class="btn btn-dark text-white rounded-0">Add Company</button>
+        <!-- <button type="submit" *ngIf="showAdd" (click)="addNewData()"  class="btn btn-dark">Add Department</button> -->
+        <button type="submit" (click)="updateCompany()"  *ngIf="showUpdate"  class="btn btn-dark rounded-0">Update
+          Company</button>
       </div>
     </div>
   </div>
@@ -190,3 +203,17 @@
 
  
  
+<!-- // companyName: new FormControl(''),
+// address1: new FormControl(''),
+// address2: new FormControl(''),
+// address3: new FormControl(''),
+// country: new FormControl(''),
+// state: new FormControl(''),
+// city: new FormControl(''),
+// taxId1: new FormControl(''),
+// taxId2: new FormControl(''),
+// phone: new FormControl(''),
+// faxNo: new FormControl(''),
+// email: new FormControl(''),
+// mobile: new FormControl(''),
+// website: new FormControl(''), -->

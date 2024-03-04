@@ -1,95 +1,111 @@
-<div class="fade-in">
-  <c-row ngPreserveWhitespaces>
-    <c-col xs="12">
-      <app-docs-callout href="components/breadcrumb" name="Breadcrumb"></app-docs-callout>
-    </c-col>
-    <c-col class="mb-4" xs="12">
-      <c-card>
-        <c-card-header>
-          <strong>Angular Breadcrumbs</strong>
-        </c-card-header>
-        <c-card-body>
-          <p class="text-medium-emphasis small">
-            The breadcrumb navigation provides links back to each previous page the user navigated
-            through and shows the current location in a website or an application. You don’t have
-            to add separators, because they automatically added in CSS through
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">
-              <code>::before</code>
-            </a>
-            and
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">
-              <code>content</code>
-            </a>
-            .
-          </p>
-          <app-docs-example href="components/breadcrumb">
-            <c-breadcrumb class="mb-2">
-              <c-breadcrumb-item *ngFor="let item of items; index as i; last as isLast"
-                                 [active]="isLast"
-                                 [url]="item.url">
-                {{item.label}}
-              </c-breadcrumb-item>
-            </c-breadcrumb>
-            <hr>
-            <c-breadcrumb class="mb-2">
-              <c-breadcrumb-item *ngFor="let item of items.slice(0,1); index as i; last as isLast"
-                                 [active]="isLast"
-                                 [url]="item.url">
-                {{item.label}}
-              </c-breadcrumb-item>
-            </c-breadcrumb>
-            <c-breadcrumb class="mb-2">
-              <c-breadcrumb-item *ngFor="let item of items.slice(0,2); index as i; last as isLast"
-                                 [active]="isLast"
-                                 [url]="item.url">
-                {{item.label}}
-              </c-breadcrumb-item>
-            </c-breadcrumb>
-            <c-breadcrumb class="mb-2">
-              <c-breadcrumb-item *ngFor="let item of items.slice(0,3); index as i; last as isLast"
-                                 [active]="isLast"
-                                 [url]="item.url">
-                {{item.label}}
-              </c-breadcrumb-item>
-            </c-breadcrumb>
-            <c-breadcrumb class="mb-2">
-              <c-breadcrumb-item *ngFor="let item of items.slice(0,4); index as i; last as isLast"
-                                 [active]="isLast"
-                                 [url]="item.url">
-                <span [ngClass]="{'mark': isLast}">{{item.label}}</span>
-              </c-breadcrumb-item>
-            </c-breadcrumb>
-            <hr>
-            <c-breadcrumb class="mb-0">
-              <c-breadcrumb-item url="/">
-                Home
-              </c-breadcrumb-item>
-              <c-breadcrumb-item url="/">
-                Library
-              </c-breadcrumb-item>
-              <c-breadcrumb-item url="/">
-                Data
-              </c-breadcrumb-item>
-              <c-breadcrumb-item [active]="true">
-                Bootstrap
-              </c-breadcrumb-item>
-            </c-breadcrumb>
-          </app-docs-example>
-        </c-card-body>
-      </c-card>
-    </c-col>
-    <c-col xs="12">
-      <c-card>
-        <c-card-header>
-          <strong>Angular Breadcrumbs</strong> <small>router</small>
-        </c-card-header>
-        <c-card-body>
-          <app-docs-example href="components/breadcrumb#router">
-            <c-breadcrumb-router></c-breadcrumb-router>
-            <c-breadcrumb-router [items]="items"></c-breadcrumb-router>
-          </app-docs-example>
-        </c-card-body>
-      </c-card>
-    </c-col>
-  </c-row>
+<nav class="navbar navbar-light">
+  <div class="container">
+    
+    <div class="d-flex">
+      <button (click)="onAdd()" class="btn btn-dark  btn-no-border" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Department</button>
+    </div>
+
+  </div>
+
+</nav>
+
+<div class="main">
+  <section class="dashboard mt-3">
+    <div class="container">
+      <table class="table table-responsive table-bordered ">
+        <thead>
+          <tr class="table-dark">
+            <th>ID</th>
+            <th>Dept Name</th>
+            <th>Dept Section</th>
+            <th>Section Description</th>
+            <th>M-Dept</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-striped" *ngFor="let row of departmentData" >
+            <td>{{row.id}}</td>
+            <td>{{row.deptName}}</td>
+            <td>{{row.deptSection}}</td>
+            <td>{{row.secDescription}}</td>
+            <td>{{row.mdept}}</td>
+
+
+            
+            <td class="text-center">
+              <button (click)="onEdit(row)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-sm btn-success mx-1 ">Edit</button>
+              <button (click)="deleteDepartment(row)" class="btn btn-sm btn-danger ">Delete</button>
+              
+            </td>
+            <!-- <td class="text-center" *ngFor="let emp of employeeData">
+              <button (click)="onEdit(emp)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="btn btn-sm btn-outline-dark">Edit</button>
+              <button (click)="deleteEmployee(emp)" class="btn btn-sm btn-outline-danger mx-2">Delete</button>
+            </td> -->
+          </tr>
+ 
+  
+        </tbody>
+      </table>
+    </div>
+  
+  </section>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl"> <!-- Use modal-lg class to make the modal larger -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Department Form</h1>
+        <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="departmentForm">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="mb-3">
+                <label for="companyName" class="form-label">Department Section  :</label>
+                <input type="text" formControlName="deptSection" class="form-control rounded-0" id="companyName" name="companyName">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="mb-3">
+                <label for="industry" class="form-label">Section Description :</label>
+                <input type="text" formControlName="secDescription" class="form-control rounded-0" id="address1" name="industry">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="mb-3">
+                <label for="location" class="form-label">Select M-Department:</label>
+                <select formControlName="mdept" class="form-select form-control" id="departmentSelect">
+                  <option value="" disabled selected>Select a department</option>
+                  <option *ngFor="let department of departments" [value]="department">{{ department }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="mb-3">
+                <label for="location" class="form-label">Department Name :</label>
+                <input type="text" formControlName="deptName" class="form-control rounded-0" id="address2" name="location">
+              </div>
+            </div>
+           
+          </div>
+          <!-- Add similar rows and columns as needed for additional fields -->
+          
+     
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" (click)="onClose()" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-dark text-white">Add Department</button> -->
+        <button type="submit" *ngIf="showAdd" (click)="addNewData()"  class="btn btn-dark">Add Department</button>
+        <button type="submit" (click)="  updateDepartment()"  *ngIf="showUpdate"  class="btn btn-dark">Update
+          Department</button>
+      </div>
+    </div>
+  </div>
 </div>

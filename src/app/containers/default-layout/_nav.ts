@@ -26,20 +26,20 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-puzzle' },
     children: [
       {
-        name: 'Accordion',
+        name: 'Company',
         url: '/base/accordion'
       },
       
       {
-        name: 'Breadcrumbs',
+        name: 'Department',
         url: '/base/breadcrumbs'
       },
       {
-        name: 'Cards',
+        name: 'Supplier',
         url: '/base/cards'
       },
       {
-        name: 'Carousel',
+        name: 'Item Category',
         url: '/base/carousel'
       },
       {

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule ,FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
 // CoreUI Modules
 import {
@@ -83,6 +84,7 @@ import { BaseRoutingModule } from './base-routing.module';
     PopoverModule,
     TableModule,
     DocsComponentsModule,
+    HttpClientModule
   ],
   declarations: [
     AccordionsComponent,

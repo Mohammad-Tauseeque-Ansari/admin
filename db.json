@@ -1,0 +1,239 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "company": [
+    {
+      "companyName": "TCS",
+      "address1": "Hyderabad",
+      "address2": "Pune",
+      "address3": "Nagpur",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Nagpur",
+      "taxId1": " T123",
+      "taxId2": "T876",
+      "phone": "09158828928",
+      "faxNo": "4433",
+      "email": "tcs@gmail.com",
+      "mobile": "9898989898",
+      "website": "www.tcs.com",
+      "id": 1
+    },
+    {
+      "companyName": "Infosys",
+      "address1": "Electronic City",
+      "address2": "Bangalore",
+      "address3": "Karnataka",
+      "country": "India",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "taxId1": "I456",
+      "taxId2": "I789",
+      "phone": "08012345678",
+      "faxNo": "1122",
+      "email": "infosys@infosys.com",
+      "mobile": "9876543210",
+      "website": "www.infosys.com",
+      "id": 2
+    },
+    {
+      "companyName": "Wipro",
+      "address1": "Sarjapur Road",
+      "address2": "Bangalore",
+      "address3": "Karnataka",
+      "country": "India",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "taxId1": "W123",
+      "taxId2": "W876",
+      "phone": "08098765432",
+      "faxNo": "3344",
+      "email": "wipro@wipro.com",
+      "mobile": "8765432109",
+      "website": "www.wipro.com",
+      "id": 3
+    },
+    {
+      "companyName": "Accenture",
+      "address1": "Embassy Tech Village",
+      "address2": "Bangalore",
+      "address3": "Karnataka",
+      "country": "India",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "taxId1": "A123",
+      "taxId2": "A789",
+      "phone": "08056789012",
+      "faxNo": "5566",
+      "email": "accenture@accenture.com",
+      "mobile": "7654321098",
+      "website": "www.accenture.com",
+      "id": 4
+    },
+    {
+      "companyName": "Cognizant",
+      "address1": "DLF IT Park",
+      "address2": "Chennai",
+      "address3": "Tamil Nadu",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "taxId1": "C123",
+      "taxId2": "C876",
+      "phone": "04434567890",
+      "faxNo": "7788",
+      "email": "cognizant@cognizant.com",
+      "mobile": "6543210987",
+      "website": "www.cognizant.com",
+      "id": 5
+    },
+    {
+      "companyName": "HCL Technologies",
+      "address1": "Sector 126",
+      "address2": "Noida",
+      "address3": "Uttar Pradesh",
+      "country": "India",
+      "state": "Uttar Pradesh",
+      "city": "Noida",
+      "taxId1": "H123",
+      "taxId2": "H876",
+      "phone": "01203456789",
+      "faxNo": "9900",
+      "email": "hcl@hcltech.com",
+      "mobile": "5432109876",
+      "website": "www.hcltech.com",
+      "id": 6
+    },
+    {
+      "companyName": "Capgemini",
+      "address1": "RMZ Ecoworld",
+      "address2": "Bangalore",
+      "address3": "Karnataka",
+      "country": "India",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "taxId1": "CG123",
+      "taxId2": "CG876",
+      "phone": "08023456789",
+      "faxNo": "1122",
+      "email": "capgemini@capgemini.com",
+      "mobile": "4321098765",
+      "website": "www.capgemini.com",
+      "id": 7
+    },
+    {
+      "companyName": "IBM India",
+      "address1": "Manyata Tech Park",
+      "address2": "Bangalore",
+      "address3": "Karnataka",
+      "country": "India",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "taxId1": "IBM123",
+      "taxId2": "IBM876",
+      "phone": "08045678901",
+      "faxNo": "3344",
+      "email": "ibm@ibm.com",
+      "mobile": "3210987654",
+      "website": "www.ibm.com",
+      "id": 8
+    },
+    {
+      "companyName": "Tech Mahindra",
+      "address1": "Hinjewadi",
+      "address2": "Pune",
+      "address3": "Maharashtra",
+      "country": "America",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "taxId1": "TM123",
+      "taxId2": "TM876",
+      "phone": "02056789012",
+      "faxNo": "5566",
+      "email": "techmahindra@techmahindra.com",
+      "mobile": "2109876543",
+      "website": "www.techmahindra.com",
+      "id": 9
+    }
+  ],
+  "department": [
+    {
+      "deptName": "COMPUTER Department",
+      "deptSection": "CSE",
+      "secDescription": "designing works",
+      "mdept": "Mechanical Design",
+      "id": 1
+    },
+    {
+      "deptName": "IT Department",
+      "deptSection": "MECH",
+      "secDescription": "Plumbing Services",
+      "mdept": "Mechanical Design",
+      "id": 2
+    },
+    {
+      "deptName": "Finance Department",
+      "deptSection": "MECH",
+      "secDescription": "Financial Analysis",
+      "mdept": "Manufacturing Engineering",
+      "id": 3
+    },
+    {
+      "deptName": "Human Resources",
+      "deptSection": "MECH",
+      "secDescription": "Employee Relations",
+      "mdept": "Quality Assurance",
+      "id": 4
+    },
+    {
+      "deptName": "Marketing Department",
+      "deptSection": "MECH",
+      "secDescription": "Advertising Campaigns",
+      "mdept": "Research and Development",
+      "id": 5
+    },
+    {
+      "deptName": "Customer Service",
+      "deptSection": "MECH",
+      "secDescription": "Client Support",
+      "mdept": "Supply Chain Management",
+      "id": 6
+    },
+    {
+      "deptName": "Product Development",
+      "deptSection": "MECH",
+      "secDescription": "New Product Design",
+      "mdept": "Maintenance",
+      "id": 7
+    },
+    {
+      "deptName": "Operations Department",
+      "deptSection": "MECH",
+      "secDescription": "Operational Efficiency",
+      "mdept": "Automation and Control",
+      "id": 8
+    },
+    {
+      "deptName": "Research Department",
+      "deptSection": "MECH",
+      "secDescription": "Market Research",
+      "mdept": "Materials Engineering",
+      "id": 9
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
