@@ -325,5 +325,75 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "itemCategory": [
+    {
+      "categoryCode": "BEA",
+      "categoryName": "BEA",
+      "status": "Active",
+      "id": 1
+    },
+    {
+      "categoryCode": "ASP",
+      "categoryName": "ASP",
+      "status": "Active",
+      "id": 2
+    },
+    {
+      "categoryCode": "BLS",
+      "categoryName": "BLS",
+      "status": "Active",
+      "id": 3
+    },
+    {
+      "categoryCode": "CAP",
+      "categoryName": "CAP",
+      "status": "Active",
+      "id": 4
+    },
+    {
+      "categoryCode": "CHE",
+      "categoryName": "CHE",
+      "status": "Active",
+      "id": 5
+    },
+    {
+      "categoryCode": "CNC",
+      "categoryName": "CNC",
+      "status": "Active",
+      "id": 6
+    },
+    {
+      "categoryCode": "COM",
+      "categoryName": "COM",
+      "status": "Active",
+      "id": 7
+    }
+  ],
+  "itemMake": [
+    {
+      "makeCode": "GO GAS",
+      "makeDescription": "GO GAS",
+      "createdAt": "2024-03-07T19:27:35.614Z",
+      "id": 1
+    },
+    {
+      "makeCode": " ASIAN",
+      "makeDescription": "ASIAN",
+      "createdAt": "2024-03-07T19:36:16.065Z",
+      "id": 2
+    },
+    {
+      "makeCode": "SHALIMAR",
+      "makeDescription": "SHALIMAR",
+      "createdAt": "2024-03-07T19:36:28.344Z",
+      "id": 3
+    },
+    {
+      "makeCode": "BERGER",
+      "makeDescription": "BERGER",
+      "createdAt": "2024-03-07T19:36:43.492Z",
+      "id": 4
+    }
+  ]
 }

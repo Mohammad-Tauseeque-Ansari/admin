@@ -1,134 +1,160 @@
-<c-row ngPreserveWhitespaces>
-  <c-col xs="12">
-    <app-docs-callout href="components/collapse" name="Collapse"></app-docs-callout>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header>
-        <strong>Angular Collapse</strong>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">You can use a link or a button component.</p>
-        <app-docs-example href="components/collapse">
-          <a (click)="toggleCollapse(0)" cButton class="me-1" color="primary">Link</a>
-          <button (click)="toggleCollapse(0)" cButton class="me-1" color="primary">
-            Button
-          </button>
-          <div [visible]="collapses[0]" cCollapse>
-            <c-card class="shadow mt-3">
-              <c-card-body>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. Nihil anim keffiyeh
-                helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                ea proident.
-              </c-card-body>
-            </c-card>
-          </div>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Collapse</strong> <small>horizontal</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Add the <code>horizontal</code> property to transition the width
-          instead of height and set a width on the immediate child element.
-        </p>
-        <app-docs-example href="components/collapse">
-          <button
-            (click)="toggleCollapse(1)"
-            cButton
-            class="me-1 mb-3"
-            color="primary"
-            [attr.aria-expanded]="collapses[1]"
-          >
-            Button
-          </button>
-          <div style="min-height: 130px">
-            <div
-              [visible]="collapses[1]"
-              cCollapse
-              horizontal
-              style="max-width: 260px"
-            >
-              <c-card class="shadow">
-                <c-card-body style="width: 260px">
-                  This is some placeholder content for a horizontal collapse.
-                  It's hidden by default and shown when triggered.
-                </c-card-body>
-              </c-card>
+ <div class="container">
+  <h3>Item Make</h3>
+ </div>
+
+ 
+
+<nav class="navbar navbar-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-auto">
+        <button
+          (click)="onAdd()"
+          class="btn btn-dark btn-no-border"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add Item Make
+        </button>
+      </div>
+
+      <div class="col">
+        <!-- <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm" >  -->
+        <!-- (input)="filterDepartments()" -->
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="main">
+  <section class="dashboard mt-3">
+    <div class="container">
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr class="table-dark">
+            <th>Sr.No.</th>
+            <th>Make Code</th>
+            <th>Make Description</th>
+            <th>Created At</th>
+
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-striped" *ngFor="let row of itemMakeData">
+            <td>{{ row.id }}</td>
+            <td>{{ row.makeCode }}</td>
+            <td>{{ row.makeDescription }}</td>
+            <td>{{ row.createdAt | date: 'yyyy-MM-dd' }}</td>
+          
+
+            <td class="text-center">
+              <button
+                (click)="onEdit(row)"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="btn btn-sm btn-success mx-1"
+              >
+                Edit
+              </button>
+              <button
+                (click)="deleteItemMake(row)"
+                class="btn btn-sm btn-danger"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <!-- Use modal-lg class to make the modal larger -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Item Make Form
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="itemMakeForm">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="companyName" class="form-label"
+                  >Make Code :</label
+                >
+                <input
+                  type="text"
+                  formControlName="makeCode"
+                  class="form-control rounded-0"
+                  id="companyName"
+                  name="companyName"
+                />
+              </div>
             </div>
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="industry" class="form-label">Make Description :</label>
+                <input
+                  type="text"
+                  formControlName="makeDescription"
+                  class="form-control rounded-0"
+                  id="address1"
+                  name="industry"
+                />
+              </div>
+            </div>
+             
           </div>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header>
-        <strong>Angular Collapse</strong> <small> multi target</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          A <code>&lt;c-button&gt;</code> can show and hide multiple elements.
-        </p>
-        <app-docs-example href="components/collapse#multiple-targets">
-          <button
-            (click)="toggleCollapse(2)"
-            cButton
-            class="me-1"
-            color="primary"
-          >
-            Toggle first element
-          </button>
-          <button
-            (click)="toggleCollapse(3)"
-            cButton
-            class="me-1"
-            color="primary"
-          >
-            Toggle second element
-          </button>
-          <button
-            (click)="toggleCollapse(2); toggleCollapse(3)"
-            cButton
-            class="me-1"
-            color="primary"
-          >
-            Toggle both
-          </button>
-          <c-row style="min-height: 130px">
-            <c-col xs="6">
-              <div [visible]="collapses[2]" cCollapse>
-                <c-card class="mt-3">
-                  <c-card-body>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident.
-                  </c-card-body>
-                </c-card>
-              </div>
-            </c-col>
-            <c-col xs="6">
-              <div [visible]="collapses[3]" cCollapse>
-                <c-card class="mt-3">
-                  <c-card-body>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident.
-                  </c-card-body>
-                </c-card>
-              </div>
-            </c-col>
-          </c-row>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-</c-row>
+          <!-- Add similar rows and columns as needed for additional fields -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          id="cancel"
+          (click)="onClose()"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <!-- <button type="button" class="btn btn-dark text-white">Add Department</button> -->
+        <button
+          type="submit"
+          *ngIf="showAdd"
+          (click)="addNewData()"
+          class="btn btn-dark"
+        >
+          Add Item Make
+        </button>
+        <button
+          type="submit"
+          (click)="updateItemMake()"
+          *ngIf="showUpdate"
+          class="btn btn-dark"
+        >
+          Update Item Make
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

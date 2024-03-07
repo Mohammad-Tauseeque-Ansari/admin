@@ -21,7 +21,7 @@ export const navItems: INavData[] = [
   //   title: true
   // },
   {
-    name: 'Master',
+    name: 'General Master',
     url: '/base',
     iconComponent: { name: 'cil-puzzle' },
     children: [
@@ -43,53 +43,53 @@ export const navItems: INavData[] = [
         url: '/base/carousel'
       },
       {
-        name: 'Collapse',
+        name: 'Item Make',
         url: '/base/collapse'
       },
       {
-        name: 'List Group',
+        name: 'Item Master',
         url: '/base/list-group'
       },
       {
-        name: 'Navs & Tabs',
+        name: 'Job Master',
         url: '/base/navs'
       },
       {
-        name: 'Pagination',
+        name: 'Contractor',
         url: '/base/pagination'
       },
       {
-        name: 'Placeholder',
+        name: 'Job Contractor',
         url: '/base/placeholder'
       },
       {
-        name: 'Popovers',
+        name: 'Tax Discount',
         url: '/base/popovers'
-      },
-      {
-        name: 'Progress',
-        url: '/base/progress'
-      },
-      {
-        name: 'Spinners',
-        url: '/base/spinners'
-      },
-      {
-        name: 'Tables',
-        url: '/base/tables'
-      },
-      {
-        name: 'Tabs',
-        url: '/base/tabs'
-      },
-      {
-        name: 'Tooltips',
-        url: '/base/tooltips'
       }
+      // {
+      //   name: 'Progress',
+      //   url: '/base/progress'
+      // },
+      // {
+      //   name: 'Spinners',
+      //   url: '/base/spinners'
+      // },
+      // {
+      //   name: 'Tables',
+      //   url: '/base/tables'
+      // },
+      // {
+      //   name: 'Tabs',
+      //   url: '/base/tabs'
+      // },
+      // {
+      //   name: 'Tooltips',
+      //   url: '/base/tooltips'
+      // }
     ]
   },
   {
-    name: 'Transaction',
+    name: 'User Master',
     url: '/buttons',
     iconComponent: { name: 'cil-cursor' },
     children: [
