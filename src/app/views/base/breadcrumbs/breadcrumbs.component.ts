@@ -24,6 +24,7 @@ export class BreadcrumbsComponent implements OnInit {
   selectedDepartment: string = '';
 
   departmentModelObj: departmentModel = new departmentModel();
+  searchTerm: string = '';
 
   departmentData!: any;
 
@@ -43,7 +44,10 @@ export class BreadcrumbsComponent implements OnInit {
     
     this.getAllDepartment();
 
+
   }
+
+
 
   onClose() {
     this.departmentForm.reset();
@@ -136,4 +140,37 @@ export class BreadcrumbsComponent implements OnInit {
 
  
   }
+
+
+  // filterDepartments() {
+  //   return this.departmentData.filter((department: any) => {
+  //     return (
+  //       department.deptName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+  //       department.deptSection.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+  //       department.secDescription.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+  //       department.mdept.toLowerCase().includes(this.searchTerm.toLowerCase())
+  //     );
+  //   });
+  // }
+
+  filterDepartments(): void {
+    this.api.getDepartment().subscribe(
+      (res) => {
+        this.departmentData = res.filter((department: any) => {
+          return (
+            department.deptName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        department.deptSection.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        department.secDescription.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        department.mdept.toLowerCase().includes(this.searchTerm.toLowerCase())
+            
+            // Add similar conditions for other fields
+          );
+        });
+      },
+      (err) => {
+        console.log('Something went wrong');
+      }
+    );
+  }
+
 }

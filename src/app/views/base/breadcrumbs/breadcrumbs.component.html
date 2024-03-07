@@ -1,11 +1,18 @@
-<nav class="navbar navbar-light">
-  <div class="container">
-    
-    <div class="d-flex">
-      <button (click)="onAdd()" class="btn btn-dark  btn-no-border" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Department</button>
-    </div>
+ 
 
+<nav class="navbar navbar-light">
+  <div class="container ">
+    <div class="row">
+      <div class="col-auto">
+        <button (click)="onAdd()" class="btn btn-dark btn-no-border" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Department</button>
+      </div>
+     
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm" (input)="filterDepartments()">
+      </div>
+    </div>
   </div>
+  
 
 </nav>
 
