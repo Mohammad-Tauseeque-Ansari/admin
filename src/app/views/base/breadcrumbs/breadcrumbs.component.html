@@ -1,7 +1,31 @@
  <div class="container">
   <h3>Department Master</h3>
  </div>
-<nav class="navbar navbar-light">
+
+ <div class="container my-3 ">
+  <div class="row">
+      <div class="col-md-4">
+          <button
+          (click)="onAdd()"
+          class="btn btn-dark btn-no-border"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add Department
+        </button> 
+      </div>
+      <div class="col-md-4">
+           
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm" (input)="filterDepartments()">
+</div>
+  </div>
+  
+</div>
+
+<!-- <nav class="navbar navbar-light">
   <div class="container ">
     <div class="row">
       <div class="col-auto">
@@ -15,7 +39,7 @@
   </div>
   
 
-</nav>
+</nav> -->
 
 <div class="main">
   <section class="dashboard mt-3">

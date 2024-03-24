@@ -1,7 +1,31 @@
 <div class="container">
   <h3>Supplier Master</h3>
  </div>
-<nav class="navbar navbar-light">
+
+ <div class="container my-3 ">
+  <div class="row">
+      <div class="col-md-4">
+          <button
+          (click)="onAdd()"
+          class="btn btn-dark btn-no-border"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add Supplier
+        </button> 
+      </div>
+      <div class="col-md-4">
+           
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Search Supplier Name" [(ngModel)]="searchTerm" (input)="filterSuppliers()">
+</div>
+  </div>
+  
+</div>
+
+<!-- <nav class="navbar navbar-light">
   <div class="container ">
     <div class="row">
       <div class="col-auto">
@@ -15,13 +39,26 @@
   </div>
   
 
-</nav>
+</nav> -->
 
 
  <div class="main">
   <section class="dashboard mt-3">
     <div class="container">
       <div class="table-responsive">
+        <nav aria-label="Page navigation"  >
+          <ul class="pagination justify-content-end">
+            <li class="page-item " [class.disabled]="currentPage === 1">
+              <a class="page-link text-dark "  (click)="setPage(currentPage - 1)">Previous</a>
+            </li>
+            <li class="page-item " *ngFor="let page of pages" [class.active]="page === currentPage">
+              <a class="page-link" (click)="setPage(page)">{{ page }}</a>
+            </li>
+            <li class="page-item" [class.disabled]="currentPage === totalPages">
+              <a class="page-link text-dark" (click)="setPage(currentPage + 1)">Next</a>
+            </li>
+          </ul>
+        </nav>
         <table class="table  table-bordered ">
           <thead>
             <tr class="table-dark">
@@ -48,7 +85,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="table-striped" *ngFor="let row of supplierData" >
+            <tr class="table-striped" *ngFor="let row of paginatedSupplierData" >
               <td>{{row.id}}</td>
               <td>{{row.supplierName}}</td>
               <td>{{row.cPerson}}</td>

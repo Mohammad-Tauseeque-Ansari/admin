@@ -16,6 +16,9 @@ export class CardsComponent {
 
   showAdd!: boolean;
   showUpdate!: boolean;
+  currentPage: number = 1; 
+  itemsPerPage: number = 5; // you can also change from your comfartablity
+
 
   constructor(private api: SupplierService) {}
 
@@ -250,4 +253,26 @@ export class CardsComponent {
       }
     );
   }
+
+  get totalPages(): number {
+    return Math.ceil(this.supplierData.length / this.itemsPerPage);
+  }
+
+  get pages(): number[] {
+    return Array(this.totalPages).fill(0).map((_, index) => index + 1);
+  }
+
+  get paginatedSupplierData(): any[] {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    return this.supplierData.slice(startIndex, endIndex);
+  }
+
+  // Function to navigate to a specific page
+  setPage(pageNumber: number): void {
+    if (pageNumber >= 1 && pageNumber <= this.totalPages) {
+      this.currentPage = pageNumber;
+    }
+  }
+
 }

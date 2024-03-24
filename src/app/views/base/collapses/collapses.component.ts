@@ -16,6 +16,9 @@ export class CollapsesComponent {
   itemMakeData! : any;
   showAdd!: boolean;
   showUpdate!: boolean;
+  currentPage: number = 1; 
+  itemsPerPage: number = 8; // you can also change from your comfartablity
+
 
   constructor(private api: ItemMakeService) {}
 
@@ -113,6 +116,27 @@ export class CollapsesComponent {
         console.log('Something Went Wrong');
       }
     );
+  }
+
+  get totalPages(): number {
+    return Math.ceil(this.itemMakeData.length / this.itemsPerPage);
+  }
+
+  get pages(): number[] {
+    return Array(this.totalPages).fill(0).map((_, index) => index + 1);
+  }
+
+  get paginatedItemMakeData(): any[] {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    return this.itemMakeData.slice(startIndex, endIndex);
+  }
+
+  // Function to navigate to a specific page
+  setPage(pageNumber: number): void {
+    if (pageNumber >= 1 && pageNumber <= this.totalPages) {
+      this.currentPage = pageNumber;
+    }
   }
 
 
