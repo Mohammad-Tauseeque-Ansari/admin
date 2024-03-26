@@ -117,7 +117,7 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-list' },
     children: [
       {
-        name: 'Material Requirement Note',
+        name: 'M.R.N ',
         url: '/notifications/alerts'
       },
       {
@@ -125,7 +125,7 @@ export const navItems: INavData[] = [
         url: '/notifications/badges'
       },
       {
-        name: 'Good Receipt Master',
+        name: 'G.R.N',
         url: '/notifications/modal'
       },
       {

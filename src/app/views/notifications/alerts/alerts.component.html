@@ -1,211 +1,514 @@
-<c-row>
-  <c-col xs="12">
-    <app-docs-callout href="components/alert" name="Alert"></app-docs-callout>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header>
-        <strong>Angular Alert</strong>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Angular Alert is prepared for any length of text, as well as an optional close button.
-          For a styling, use one of the <strong>required</strong> contextual <code>color</code>
-          props (e.g., <code>primary</code>). For inline dismissal, use the
-          <a href="https://coreui.io/angular/docs/4.0/components/alert#dismissing">
-            dismissing prop
-          </a>
-          .
-        </p>
-        <app-docs-example href="components/alert">
-          <c-alert color="primary">A simple primary alert—check it out!</c-alert>
-          <c-alert color="secondary">A simple secondary alert—check it out!</c-alert>
-          <c-alert color="success">A simple success alert—check it out!</c-alert>
-          <c-alert color="danger">A simple danger alert—check it out!</c-alert>
-          <c-alert color="warning">A simple warning alert—check it out!</c-alert>
-          <c-alert color="info">A simple info alert—check it out!</c-alert>
-          <c-alert color="light">A simple light alert—check it out!</c-alert>
-          <c-alert color="dark">A simple dark alert—check it out!</c-alert>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Alert</strong> <small>solid variant</small>
-      </c-card-header>
-      <c-card-body>
-        <app-docs-example href="components/alert">
-          <c-alert color="primary" variant="solid">A solid primary alert—check it out!</c-alert>
-          <c-alert color="secondary" variant="solid">A solid secondary alert—check it out!</c-alert>
-          <c-alert color="success" variant="solid">A solid success alert—check it out!</c-alert>
-          <c-alert color="danger" variant="solid">A solid danger alert—check it out!</c-alert>
-          <c-alert color="warning" variant="solid">A solid warning alert—check it out!</c-alert>
-          <c-alert color="info" variant="solid">A solid info alert—check it out!</c-alert>
-          <c-alert color="light" variant="solid">A solid light alert—check it out!</c-alert>
-          <c-alert color="dark" variant="solid">A solid dark alert—check it out!</c-alert>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Alert</strong> <small>Link color</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Use the <code>cAlertLink</code> directive to immediately give matching colored
-          links inside any alert.
-        </p>
-        <app-docs-example href="components/alert#link-color">
-          <c-alert color="primary">
-            A simple primary alert with <a cAlertLink routerLink="./">an example link</a>. Give
-            it a click if you like.
-          </c-alert>
-          <c-alert color="secondary">
-            A simple secondary alert with <a cAlertLink routerLink="./">an example link</a>.
-            Give it a click if you like.
-          </c-alert>
-          <c-alert color="success">
-            A simple success alert with <a cAlertLink routerLink="./">an example link</a>. Give
-            it a click if you like.
-          </c-alert>
-          <c-alert color="danger">
-            A simple danger alert with <a cAlertLink routerLink="./">an example link</a>. Give
-            it a click if you like.
-          </c-alert>
-          <c-alert color="warning">
-            A simple warning alert with <a cAlertLink routerLink="./">an example link</a>. Give
-            it a click if you like.
-          </c-alert>
-          <c-alert color="info">
-            A simple info alert with <a cAlertLink routerLink="./">an example link</a>. Give it
-            a click if you like.
-          </c-alert>
-          <c-alert color="light">
-            A simple light alert with <a cAlertLink routerLink="./">an example link</a>. Give it
-            a click if you like.
-          </c-alert>
-          <c-alert color="dark">
-            A simple dark alert with <a cAlertLink routerLink="./">an example link</a>. Give it
-            a click if you like.
-          </c-alert>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Alert</strong> <small>Additional content</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Alert can also incorporate supplementary components &amp; elements like heading,
-          paragraph, and divider.
-        </p>
-        <app-docs-example href="components/alert#additional-content">
-          <c-alert color="success">
-            <h4 cAlertHeading>Well done!</h4>
-            <p>
-              Aww yeah, you successfully read this important alert message. This example text is
-              going to run a bit longer so that you can see how spacing within an alert works
-              with this kind of content.
-            </p>
-            <hr/>
-            <p class="mb-0">
-              Whenever you need to, be sure to use margin utilities to keep things nice and
-              tidy.
-            </p>
-          </c-alert>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Alert</strong>  <small>Icons</small>
-      </c-card-header>
-      <c-card-body>
-        <app-docs-example href="components/alert">
-          <c-alert color="dark" class="d-flex align-items-center">
-            <svg cIcon name="cilCheck" class="flex-shrink-0 me-2" size="xl"></svg>
-            <div>An example alert with an icon</div>
-          </c-alert>
-          <c-alert color="secondary" class="d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
-              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </svg>
-            <div>An example alert with an icon</div>
-          </c-alert>
+<div class="container">
+  <h3> Material Requirement Note</h3>
+ </div>
 
-          <hr>
+ <div class="container my-3 ">
+  <div class="row">
+      <div class="col-md-4">
+          <button
+          (click)="onAdd()"
+          class="btn btn-dark btn-no-border"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add MRN Details
+        </button> 
+      </div>
+      <div class="col-md-4">
+           
+      </div>
+      <div class="col-md-4">
+        <nav aria-label="Page navigation"  >
+          <ul class="pagination justify-content-end">
+            <li class="page-item " [class.disabled]="currentPage === 1">
+              <a class="page-link text-dark "  (click)="setPage(currentPage - 1)">Previous</a>
+            </li>
+            <li class="page-item " *ngFor="let page of pages" [class.active]="page === currentPage">
+              <a class="page-link" (click)="setPage(page)">{{ page }}</a>
+            </li>
+            <li class="page-item" [class.disabled]="currentPage === totalPages">
+              <a class="page-link text-dark" (click)="setPage(currentPage + 1)">Next</a>
+            </li>
+          </ul>
+        </nav>
+          <!-- <input type="text" class="form-control" placeholder="Search Item" [(ngModel)]="searchTerm" (input)="filterSuppliers()"> -->
+  </div>
+  </div>
+  
+</div>
+ 
+
+<!-- <nav class="navbar navbar-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-auto">
+        <button
+          (click)="onAdd()"
+          class="btn btn-dark btn-no-border"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add Item Make
+        </button>
+      </div>
+
+      <div class="col">
+      
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+<div class="main">
+  <section class="dashboard mt-3">
+    <div class="container">
+    
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr class="table-dark">
+            <th>Sr.No</th>
+            <th>Item</th>
+            <th>U.O.M</th>
+            <th>Qty Stock</th>
+            <th>Last PR</th>
+            <th>Qty Req</th>
+            <th>Qty Order</th>
+            <th>Curr PR</th>
+            <th>Supplier Code</th>
+            <th>Department</th>
+            <th>Job</th>
+            <th>Remark</th>
+ 
+           
+
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-striped" *ngFor="let row of paginatedMRNDetailsData">
+            <td>{{ row.id }}</td>
+            <th>{{row.item}}</th>
+            <th>{{row.uom}}</th>
+            <th>{{row.quantityStock}}</th>
+            <th>{{row.lastPR}}</th>
+            <th>{{row.quantityRequired}}</th>
+            <th>{{row.quantityOrder}}</th>
+            <th>{{row.currentPR}}</th>
+            <th>{{row.supplier}}</th>
+            <th>{{row.department}}</th>
+            <th>{{row.jobMaster}}</th>
+            <th>{{row.remark}}</th>
           
-          <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-            </symbol>
-            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-            </symbol>
-            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </symbol>
-          </svg>
 
-          <c-alert color="primary" class="d-flex align-items-center">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-            <div>An example primary alert with an icon</div>
-          </c-alert>
-          <c-alert color="success" class="d-flex align-items-center">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#check-circle-fill"/></svg>
-            <div>An example success alert with an icon</div>
-          </c-alert>
-          <c-alert color="warning" class="d-flex align-items-center">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-            <div>An example warning alert with an icon</div>
-          </c-alert>
-          <c-alert color="danger" class="d-flex align-items-center">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-            <div>An example danger alert with an icon</div>
-          </c-alert>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Alert</strong> <small>Dismissing</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Alerts can also be easily dismissed. Just add the <code>dismissible</code> prop.
-        </p>
-        <app-docs-example href="components/alert#dismissing">
-          <c-alert [(visible)]="visible[0]" dismissible color="warning" fade *ngIf="visible[0]">
-            <strong>Go right ahead</strong> and click that dismiss over there on the right.
-          </c-alert>
-          <c-alert #alertWithButtonCloseTemplate="cAlert"
-                   [dismissible]="dismissible"
-                   [visible]="visible[1]"
-                   (visibleChange)="onAlertVisibleChange($event)"
-                   color="dark"
-                   fade
-                   variant="solid">
-            <ng-template [ngIf]="alertWithButtonCloseTemplate.dismissible" cTemplateId="alertButtonCloseTemplate">
-              <button (click)="visible[1]=false" cButtonClose white></button>
-            </ng-template>
-            <strong>Go right ahead</strong> and click that dismiss over there on the right.
-          </c-alert>
-          <hr>
-          <button (click)="onToggleDismiss()" cButton class="'me-1'" color="primary">Toggle</button>
-          <button (click)="onResetDismiss()" cButton color="secondary">Reset</button>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-</c-row>
+            <td class="text-center">
+              <!-- <button
+                (click)="onEdit(row)"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="btn btn-sm btn-success mx-1"
+              >
+                Edit
+              </button> -->
+              <button
+                (click)="deleteMrnDetails(row)"
+                class="btn btn-sm btn-danger"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl">
+    <!-- Use modal-lg class to make the modal larger -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Material Requirement Note Form
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="mrnDetailsForm">
+                 <div class="row">
+                  <div class="col-md-2">
+                    <div class="mb-3">
+                      <label for="companyName" class="form-label"
+                        >M.R.N Date <span class="text-danger">*</span> :</label
+                      >
+                      <input
+                        type="date"
+                        formControlName="mrnDate"
+                        class="form-control rounded-0"
+                        id="companyName"
+                        name="companyName"
+                        
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="mb-3">
+                      <label for="companyName" class="form-label"
+                        >Interchange <span class="text-danger">*</span> :</label
+                      >
+                      <input
+                        type="text"
+                        formControlName="interchange"
+                        class="form-control rounded-0"
+                        id="companyName"
+                        name="companyName"
+                        placeholder="interchange"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="mb-3">
+                      <label for="companyName" class="form-label"
+                        >Store Interchange   :</label
+                      >
+                      <input
+                        type="text"
+                        formControlName="storeInterchange"
+                        class="form-control rounded-0"
+                        id="companyName"
+                        name="companyName"
+                        placeholder="store interchange"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="mb-3">
+                      <label for="companyName" class="form-label"
+                        >Head Of Dept <span class="text-danger">*</span> :</label
+                      >
+                      <input
+                        type="text"
+                        formControlName="hod"
+                        class="form-control rounded-0"
+                        id="companyName"
+                        name="companyName"
+                        placeholder="H.O.D"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="mb-3">
+                      <label for="companyName" class="form-label"
+                        >Author Sign <span class="text-danger">*</span> :</label
+                      >
+                      <input
+                        type="text"
+                        formControlName="authorSign"
+                        class="form-control rounded-0"
+                        id="companyName"
+                        name="companyName"
+                        placeholder="author sign"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="mb-3">
+                      <label for="companyName" class="form-label"
+                        >Remark :</label
+                      >
+                      <input
+                        type="text"
+                        formControlName="remark"
+                        class="form-control rounded-0"
+                        id="companyName"
+                        name="companyName"
+                        placeholder="remark"
+                      />
+                    </div>
+                  </div>
+                 </div>
+                
+                  <div class="card mt-2">
+                    <div class="card-header  bg-dark">
+                      <h5 class="card-title text-white">Material Details</h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label">
+                                Select Item <span class="text-danger">*</span> :
+                            </label>
+                            <select class="form-select rounded-0" placeholder="select" formControlName="item">
+                                <option value="" disabled selected>Select Item</option>
+                                <!-- <option *ngFor="let item of ItemData" [value]="item">{{item.itemCode}} [{{ item.itemName }}]</option> -->
+                                <option *ngFor="let item of ItemData" [value]="item.itemName">{{item.itemCode}} [{{ item.itemName }}]</option>
+
+                            </select>
+                        </div>
+                        </div>
+                       
+                        <div class="col-md-2">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label"
+                              >Current Purchase Rate <span class="text-danger">*</span> :</label
+                            >
+                            <input
+                              type="text"
+                              formControlName="currentPR"
+                              class="form-control rounded-0"
+                              id="companyName"
+                              name="companyName"
+                              placeholder="currentPR"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label"
+                              >Quantity Required <span class="text-danger">*</span> :</label
+                            >
+                            <input
+                              type="text"
+                              formControlName="quantityRequired"
+                              class="form-control rounded-0"
+                              id="companyName"
+                              name="companyName"
+                              placeholder="quantity Required"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label"
+                              >Quantity Order <span class="text-danger">*</span>  :</label
+                            >
+                            <input
+                              type="text"
+                              formControlName="quantityOrder"
+                              class="form-control rounded-0"
+                              id="companyName"
+                              name="companyName"
+                              placeholder="quantity Order"
+                            />
+                          </div>
+                        </div>
+                       </div>
+                       <div class="row">
+                        <div class="col-md-2">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label"
+                              >U.O.M <span class="text-danger">*</span> :</label
+                            >
+                            <input
+                              type="text"
+                              formControlName="uom"
+                              class="form-control rounded-0"
+                              id="companyName"
+                              name="companyName"
+                              placeholder="u.o.m"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label"
+                              >Quantity Stock <span class="text-danger">*</span> :</label
+                            >
+                            <input
+                              type="text"
+                              formControlName="quantityStock"
+                              class="form-control rounded-0"
+                              id="companyName"
+                              name="companyName"
+                              placeholder="quantity stock"
+                            />
+                          </div>
+                        </div>
+                       
+                        <div class="col-md-2">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label"
+                              >Last Purchase Rate   :</label
+                            >
+                            <input
+                              type="text"
+                              formControlName="lastPR"
+                              class="form-control rounded-0"
+                              id="companyName"
+                              name="companyName"
+                              placeholder="last purchase rate"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label"
+                              >Last Purchase Date <span class="text-danger">*</span> :</label
+                            >
+                            <input
+                              type="date"
+                              formControlName="lastPRDate"
+                              class="form-control rounded-0"
+                              id="companyName"
+                              name="companyName"
+                              placeholder="last Purchase Date"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label"
+                              >Remark :</label
+                            >
+                            <input
+                              type="text"
+                              formControlName="mRemark"
+                              class="form-control rounded-0"
+                              id="companyName"
+                              name="companyName"
+                              placeholder="remark"
+                            />
+                          </div>
+                        </div>
+                        
+                       </div>
+                       <div class="row">
+                        <div class="col-md-4">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label">
+                                Select Supplier <span class="text-danger">*</span> :
+                            </label>
+                            <select class="form-select rounded-0" placeholder="select" formControlName="supplier">
+                                <option value="" disabled selected>Select Supplier</option>
+                                <!-- <option *ngFor="let item of ItemData" [value]="item">{{item.itemCode}} [{{ item.itemName }}]</option> -->
+                                <option *ngFor="let sup of SupplierData" [value]="sup.supplierName">{{ sup.supplierName }}</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label">
+                                Select Department <span class="text-danger">*</span> :
+                            </label>
+                            <select class="form-select rounded-0" placeholder="select" formControlName="department">
+                                <option value="" disabled selected>Select Department</option>
+                                <!-- <option *ngFor="let item of ItemData" [value]="item">{{item.itemCode}} [{{ item.itemName }}]</option> -->
+                                <option *ngFor="let sup of DepartmentData" [value]="sup">{{ sup }}</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="mb-3">
+                            <label for="companyName" class="form-label">
+                                Select Job <span class="text-danger">*</span> :
+                            </label>
+                            <select class="form-select rounded-0" placeholder="select" formControlName="jobMaster">
+                                <option value="" disabled selected>Select Job</option>
+                                <!-- <option *ngFor="let item of ItemData" [value]="item">{{item.itemCode}} [{{ item.itemName }}]</option> -->
+                                <option *ngFor="let sup of JobMasterData" [value]="sup">{{ sup }}</option>
+                            </select>
+                        </div>
+                        </div>
+                        
+                      
+                         
+                       </div>
+                      
+                    </div>
+                  </div>
+               
+
+
+          <!-- <div class="row">
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="companyName" class="form-label"
+                  >Short Code <span class="text-danger">*</span> :</label
+                >
+                <input
+                  type="text"
+                  formControlName="shortCode"
+                  class="form-control rounded-0"
+                  id="companyName"
+                  name="companyName"
+                  placeholder="short code"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="companyName" class="form-label"
+                  >Designation <span class="text-danger">*</span> :</label
+                >
+                <input
+                  type="text"
+                  formControlName="designation"
+                  class="form-control rounded-0"
+                  id="companyName"
+                  name="companyName"
+                  placeholder="designation"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mb-3">
+                <label for="companyName" class="form-label">
+                    Select Under Designation <span class="text-danger">*</span> :
+                </label>
+                <select class="form-select rounded-0" placeholder="select" formControlName="underDesignation">
+                    <option value="" disabled selected>Select Under Designation</option>
+                    <option *ngFor="let item of Roles" [value]="item">{{ item }}</option>
+                </select>
+            </div>
+            
+            </div>
+             
+          </div> -->
+          <!-- Add similar rows and columns as needed for additional fields -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          id="cancel"
+          (click)="onClose()"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <!-- <button type="button" class="btn btn-dark text-white">Add Department</button> -->
+        <button
+          type="submit"
+          *ngIf="showAdd"
+          (click)="addNewData()"
+          class="btn  btn-dark"
+        >
+          Add MRN Details
+        </button>
+        <button
+          type="submit"
+          (click)="updateMrnDetails()"
+          *ngIf="showUpdate"
+          class="btn btn-dark"
+        >
+          Update MRN Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
