@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonGroupsComponent } from './button-groups/button-groups.component';
 import { DropdownsComponent } from './dropdowns/dropdowns.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+ 
 
 const routes: Routes = [
   {
@@ -36,6 +38,13 @@ const routes: Routes = [
         component: DropdownsComponent,
         data: {
           title: 'Dropdowns'
+        }
+      },
+      {
+        path: 'createUser',
+        component: CreateUserComponent,
+        data: {
+          title: 'CreateUser'
         }
       },
     ]

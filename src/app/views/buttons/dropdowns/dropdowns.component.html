@@ -1,523 +1,248 @@
-<c-row>
-  <c-col xs="12">
-    <app-docs-callout href="components/dropdown" name="Dropdown"></app-docs-callout>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Dropdown</strong> <small>Single button</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Here&#39;s how you can put them to work with either <code>&lt;button&gt;</code>
-          elements:
-        </p>
-        <app-docs-example href="components/dropdown#single-button">
-          <c-dropdown>
-            <button cButton cDropdownToggle color="secondary">
-              Dropdown button
-            </button>
-            <ul cDropdownMenu>
-              <li><h6 cDropdownHeader>Header</h6></li>
-              <li><a routerLink="./" cDropdownItem>Action</a></li>
-              <li><a routerLink="./" cDropdownItem>Another action</a></li>
-              <li><a routerLink="./" cDropdownItem>Something else here</a></li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button [routerLink]="'/buttons'" cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-        </app-docs-example>
-        <p class="text-medium-emphasis small">
-          The best part is you can do this with any button variant, too:
-        </p>
-        <app-docs-example href="components/dropdown#single-button">
-          <c-dropdown *ngFor="let color of colors; index as i;" variant="btn-group">
-            <button [color]="color" cButton cDropdownToggle>
-              {{color}}
-            </button>
-            <ul cDropdownMenu>
-              <li>
-                <button routerLink="./" cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button routerLink="./" cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button routerLink="./" cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Dropdown</strong> <small>Split button</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Similarly, create split button dropdowns with virtually the same markup as single
-          button dropdowns, but with the addition of boolean prop <code>split</code> for proper
-          spacing around the dropdown caret.
-        </p>
-        <p class="text-medium-emphasis small">
-          We use this extra class to reduce the horizontal <code>padding</code> on either side
-          of the caret by 25% and remove the <code>margin-left</code> that&#39;s attached for
-          normal button dropdowns. Those additional changes hold the caret centered in the split
-          button and implement a more properly sized hit area next to the main button.
-        </p>
-        <app-docs-example href="components/dropdown#split-button">
-          <c-dropdown *ngFor="let color of colors; index as i;" placement="bottom-start" variant="btn-group">
-            <button [color]="color" cButton>
-              {{color}}
-            </button>
-            <button [color]="color" cButton cDropdownToggle split>
-              <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul cDropdownMenu>
-              <li>
-                <button routerLink="./" cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Dropdown</strong> <small>Sizing</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Button dropdowns work with buttons of all sizes, including default and split dropdown
-          buttons.
-        </p>
-        <app-docs-example href="components/dropdown#sizing">
-          <c-dropdown variant="btn-group">
-            <button cButton cDropdownToggle color="secondary" size="lg">
-              Large button
-            </button>
-            <ul cDropdownMenu>
-              <li>
-                <button cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-          <c-dropdown variant="btn-group">
-            <button cButton color="secondary" size="lg">
-              Large split button
-            </button>
-            <button cButton cDropdownToggle color="secondary" size="lg" split>
-              <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul cDropdownMenu>
-              <li>
-                <button routerLink="./" cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-        </app-docs-example>
-        <app-docs-example href="components/dropdown#sizing">
-          <c-dropdown variant="btn-group">
-            <button cButton cDropdownToggle color="secondary" size="sm">
-              Small button
-            </button>
-            <ul cDropdownMenu>
-              <li>
-                <button cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-          <c-dropdown variant="btn-group">
-            <button cButton color="secondary" size="sm">
-              Small split button
-            </button>
-            <button cButton cDropdownToggle color="secondary" size="sm" split>
-              <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul cDropdownMenu>
-              <li>
-                <button routerLink="./" cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Dropdown</strong> <small>dark</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Opt into darker dropdowns to match a dark navbar or custom style by set
-          <code>dark</code> property. No changes are required to the dropdown items.
-        </p>
-        <app-docs-example href="components/dropdown#dark-dropdowns">
-          <c-dropdown>
-            <button cButton cDropdownToggle color="secondary">
-              Dropdown button
-            </button>
-            <ul cDropdownMenu dark>
-              <li>
-                <button cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-        </app-docs-example>
-        <p class="text-medium-emphasis small">And putting it to use in a navbar:</p>
-        <app-docs-example href="components/dropdown#dark-dropdowns">
-          <c-navbar class="bg-dark" colorScheme="dark" expand="lg">
-            <c-container [fluid]="true">
-              <a cNavbarBrand href="https://coreui.io/angular/" target="_blank">
-                Navbar
-              </a>
-              <button [cNavbarToggler]="collapseRef"></button>
-              <div #collapseRef="cCollapse" [navbar]="true" cCollapse>
-                <c-navbar-nav class="me-auto mb-2 mb-lg-0">
-                  <c-nav-item>
-                    <a [active]="true" routerLink="./" cNavLink>Home</a>
-                  </c-nav-item>
-                  <c-nav-item>
-                    <a routerLink="./" cNavLink>Link</a>
-                  </c-nav-item>
-                  <c-nav-item>
-                    <c-dropdown variant="nav-item" [popper]="false">
-                      <a cNavLink cDropdownToggle>
-                        Dropdown
-                      </a>
-                      <ul cDropdownMenu dark>
-                        <li>
-                          <button cDropdownItem>Action</button>
-                        </li>
-                        <li>
-                          <button cDropdownItem>Another action</button>
-                        </li>
-                        <li>
-                          <button cDropdownItem>Something else here</button>
-                        </li>
-                        <li>
-                          <hr cDropdownDivider>
-                        </li>
-                        <li>
-                          <button cDropdownItem>Separated link</button>
-                        </li>
-                      </ul>
-                    </c-dropdown>
-                  </c-nav-item>
-                  <c-nav-item>
-                    <a cNavLink disabled>Disabled</a>
-                  </c-nav-item>
-                </c-navbar-nav>
-                <form cForm class="d-flex">
-                  <input aria-label="Search" cFormControl class="me-2" placeholder="Search" type="search">
-                  <button cButton color="success" type="submit" variant="outline">Search</button>
-                </form>
+<style>
+  .table {
+    font-size: 13px; /* Adjust the font size as per your preference */
+   
+  }
+  .btn-no-border{
+ border-radius: 0%;
+ margin: 0px ;
+ font-size: 14px;
+  }
+
+  .btn-sm {
+    padding: 0.15rem 0.5rem; /* Adjust padding as per your preference */
+    font-size: 12px; /* Adjust font size as per your preference */
+  }
+  
+
+  .form-control {
+    font-size: 14px; /* Adjust the font size as per your preference */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  label{
+    font-weight: 500;
+  }
+
+  .suppform {
+    font-size: 14px;
+  }
+
+  .page-link{
+    cursor: pointer !important;
+    font-size: 14px !important;
+    border-radius: 0 !important;
+    color: black;
+   }
+
+   
+   .page-item.active .page-link {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* Light text color */
+    border: none;
+}
+
+ 
+  
+</style>
+<div class="container ">
+  <h3>Employee Department Master</h3>
+ </div>
+
+ <div class="container    my-3 ">
+  <div class="row">
+      <div class="col-md-4">
+          <button
+          (click)="onAdd()"
+          class="btn btn-dark btn-no-border"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add Department
+        </button> 
+      </div>
+      <div class="col-md-4">
+           
+      </div>
+      <div class="col-md-4">
+        <nav aria-label="Page navigation"  >
+          <ul class="pagination justify-content-end">
+            <li class="page-item " [class.disabled]="currentPage === 1">
+              <a class="page-link text-dark "  (click)="setPage(currentPage - 1)">Previous</a>
+            </li>
+            <li class="page-item " *ngFor="let page of pages" [class.active]="page === currentPage">
+              <a class="page-link" (click)="setPage(page)">{{ page }}</a>
+            </li>
+            <li class="page-item" [class.disabled]="currentPage === totalPages">
+              <a class="page-link text-dark" (click)="setPage(currentPage + 1)">Next</a>
+            </li>
+          </ul>
+        </nav>
+          <!-- <input type="text" class="form-control" placeholder="Search Item" [(ngModel)]="searchTerm" (input)="filterSuppliers()"> -->
+  </div>
+  </div>
+  
+</div>
+ 
+
+<!-- <nav class="navbar navbar-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-auto">
+        <button
+          (click)="onAdd()"
+          class="btn btn-dark btn-no-border"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add Item Make
+        </button>
+      </div>
+
+      <div class="col">
+      
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+<div class="main">
+  <section class="dashboard mt-3">
+    <div class="container">
+    
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr class="table-dark">
+            <th>ID</th>
+            <th>Shorted Code</th>
+            <th>Department</th>
+            <th>Data Created</th>
+
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-striped" *ngFor="let row of paginatedDepartmentData">
+            <td>{{ row.id }}</td>
+            <td>{{ row.shortCode }}</td>
+            <td>{{ row.deptDetails }}</td>
+          
+            <td>{{ row.createdAt | date: 'yyyy-MM-dd' }}</td>
+          
+
+            <td class="text-center">
+              <button
+                (click)="onEdit(row)"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="btn btn-sm btn-success mx-1"
+              >
+                Edit
+              </button>
+              <button
+                (click)="deleteDepartment(row)"
+                class="btn btn-sm btn-danger"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <!-- Use modal-lg class to make the modal larger -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Employee Department
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="userDepartmentForm">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="companyName" class="form-label"
+                  >Short Code <span class="text-danger">*</span> :</label
+                >
+                <input
+                  type="text"
+                  formControlName="shortCode"
+                  class="form-control rounded-0"
+                  id="companyName"
+                  name="companyName"
+                  placeholder="short code"
+                />
               </div>
-            </c-container>
-          </c-navbar>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Dropdown</strong> <small>Dropup</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Trigger dropdown menus above elements by adding
-          <code>direction=&#34;dropup&#34;</code> to the <code>&lt;c-dropdown&gt;</code>
-          component.
-        </p>
-        <app-docs-example href="components/dropdown#dropup">
-          <c-dropdown direction="dropup" variant="btn-group">
-            <button cButton cDropdownToggle color="secondary">
-              Dropup
-            </button>
-            <ul cDropdownMenu>
-              <li>
-                <button cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-          <c-dropdown direction="dropup" variant="btn-group">
-            <button cButton color="secondary">
-              Split Dropup
-            </button>
-            <button [split]="true" cButton cDropdownToggle color="secondary">
-              <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul cDropdownMenu>
-              <li>
-                <button cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Dropdown</strong> <small>Dropright</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Trigger dropdown menus at the right of the elements by adding
-          <code>direction=&#34;dropend&#34;</code> to the <code>&lt;c-dropdown&gt;</code>
-          component.
-        </p>
-        <app-docs-example href="components/dropdown#dropright">
-          <c-dropdown direction="dropend" variant="btn-group">
-            <button cButton cDropdownToggle color="secondary">
-              Dropend
-            </button>
-            <ul cDropdownMenu>
-              <li>
-                <button cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-          <c-dropdown direction="dropend" variant="btn-group">
-            <button cButton color="secondary">
-              Split Right
-            </button>
-            <button [split]="true" cButton cDropdownToggle color="secondary">
-              <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul cDropdownMenu>
-              <li>
-                <button cDropdownItem>Action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Another action</button>
-              </li>
-              <li>
-                <button cDropdownItem>Something else here</button>
-              </li>
-              <li>
-                <hr cDropdownDivider>
-              </li>
-              <li>
-                <button cDropdownItem>Separated link</button>
-              </li>
-            </ul>
-          </c-dropdown>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Dropdown</strong> <small>Dropleft</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Trigger dropdown menus at the left of the elements by adding
-          <code>direction=&#34;dropstart&#34;</code> to the <code>&lt;c-dropdown&gt;</code>
-          component.
-        </p>
-        <app-docs-example href="components/dropdown#dropleft">
-          <c-button-group>
-            <c-dropdown direction="dropstart" variant="input-group">
-              <button [split]="true" cButton cDropdownToggle color="secondary">
-                <span class="visually-hidden">Toggle Dropdown</span>
-              </button>
-              <ul cDropdownMenu>
-                <li>
-                  <button cDropdownItem>Action</button>
-                </li>
-                <li>
-                  <button cDropdownItem>Another action</button>
-                </li>
-                <li>
-                  <button cDropdownItem>Something else here</button>
-                </li>
-                <li>
-                  <hr cDropdownDivider>
-                </li>
-                <li>
-                  <button cDropdownItem>Separated link</button>
-                </li>
-              </ul>
-              <button cButton color="secondary">
-                Split Left
-              </button>
-            </c-dropdown>
-          </c-button-group>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header ngPreserveWhitespaces>
-        <strong>Angular Dropdown</strong> <small>Centered</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Trigger dropdown menus centered below the toggle by adding <code>direction="center"</code> to the <code>c-dropdown</code>
-          component.
-        </p>
-        <app-docs-example href="components/dropdown#centered">
-          <c-dropdown direction="center" variant="btn-group">
-            <button cButton cDropdownToggle color="secondary">Centered dropdown</button>
-            <ul cDropdownMenu>
-              <li>
-                <button cDropdownItem>Action one</button>
-              </li>
-              <li>
-                <button cDropdownItem>Action two</button>
-              </li>
-              <li>
-                <button cDropdownItem>Action three</button>
-              </li>
-            </ul>
-          </c-dropdown>
-          <c-dropdown direction="dropup-center" class="dropup" variant="btn-group">
-            <button cButton cDropdownToggle color="secondary">Centered dropdup</button>
-            <ul cDropdownMenu>
-              <li>
-                <button cDropdownItem>Action one</button>
-              </li>
-              <li>
-                <button cDropdownItem>Action two</button>
-              </li>
-              <li>
-                <button cDropdownItem>Action three</button>
-              </li>
-            </ul>
-          </c-dropdown>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-</c-row>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="companyName" class="form-label"
+                  >Department Details <span class="text-danger">*</span> :</label
+                >
+                <input
+                  type="text"
+                  formControlName="deptDetails"
+                  class="form-control rounded-0"
+                  id="companyName"
+                  name="companyName"
+                  placeholder="Department Details "
+                />
+              </div>
+            </div>
+             
+             
+          </div>
+          <!-- Add similar rows and columns as needed for additional fields -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          id="cancel"
+          (click)="onClose()"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <!-- <button type="button" class="btn btn-dark text-white">Add Department</button> -->
+        <button
+          type="submit"
+          *ngIf="showAdd"
+          (click)="addNewData()"
+          class="btn btn-dark"
+        >
+          Add Department
+        </button>
+        <button
+          type="submit"
+          (click)="updateDepartment()"
+          *ngIf="showUpdate"
+          class="btn btn-dark"
+        >
+          Update Department
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

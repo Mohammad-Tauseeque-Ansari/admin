@@ -24,12 +24,14 @@ import {
 } from '@coreui/angular';
 
 import { IconModule } from '@coreui/icons-angular';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
     ButtonsComponent,
     ButtonGroupsComponent,
     DropdownsComponent,
+    CreateUserComponent,
   ],
   imports: [
     CommonModule,

@@ -26,7 +26,7 @@ export class PopoversComponent implements OnInit {
     tName: new FormControl('' ,[Validators.required]),
     type: new FormControl(''),
     tdFor: new FormControl('' ,[Validators.required]),
-    createdAt : new FormControl(new Date()),
+    createdAt :new FormControl(''),
     remark: new FormControl(''),
   });
 
@@ -49,7 +49,7 @@ export class PopoversComponent implements OnInit {
       tName: this.taxDiscountForm.value.tName,
       type: this.taxDiscountForm.value.type,
       tdFor:this.taxDiscountForm.value.tdFor,
-      createdAt: this.taxDiscountForm.value.createdAt,
+      createdAt: new Date(),
       remark: this.taxDiscountForm.value.remark,
     };
     // console.log(postDataObj);

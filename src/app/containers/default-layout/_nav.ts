@@ -23,7 +23,7 @@ export const navItems: INavData[] = [
   {
     name: 'General Master',
     url: '/base',
-    iconComponent: { name: 'cil-puzzle' },
+    iconComponent: { name: 'cil-pen' },
     children: [
       {
         name: 'Company',
@@ -91,19 +91,46 @@ export const navItems: INavData[] = [
   {
     name: 'User Master',
     url: '/buttons',
-    iconComponent: { name: 'cil-cursor' },
+    iconComponent: { name: 'cil-pen' },
     children: [
+     
       {
-        name: 'Buttons',
+        name: 'User Role',
+        url: '/buttons/button-groups'
+      }, {
+        name: 'Designation',
         url: '/buttons/buttons'
       },
       {
-        name: 'Button groups',
-        url: '/buttons/button-groups'
+        name: 'User Department',
+        url: '/buttons/dropdowns'
       },
       {
-        name: 'Dropdowns',
-        url: '/buttons/dropdowns'
+        name: 'Create User',
+        url: '/buttons/createUser'
+      }
+    ]
+  },
+  {
+    name: 'Transaction',
+    url: '/notifications',
+    iconComponent: { name: 'cil-list' },
+    children: [
+      {
+        name: 'Material Requirement Note',
+        url: '/notifications/alerts'
+      },
+      {
+        name: 'Purchase Order',
+        url: '/notifications/badges'
+      },
+      {
+        name: 'Good Receipt Master',
+        url: '/notifications/modal'
+      },
+      {
+        name: 'Issue Note',
+        url: '/notifications/toasts'
       }
     ]
   },
@@ -113,35 +140,35 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-notes' },
     children: [
       {
-        name: 'Form Control',
+        name: 'M.R.N Report',
         url: '/forms/form-control'
       },
       {
-        name: 'Select',
+        name: 'Purchase Report',
         url: '/forms/select'
       },
       {
-        name: 'Checks & Radios',
+        name: 'G.R.N Report',
         url: '/forms/checks-radios'
       },
       {
-        name: 'Range',
+        name: 'Issue Item Report',
         url: '/forms/range'
       },
       {
-        name: 'Input Group',
+        name: 'Stock Report',
         url: '/forms/input-group'
       },
       {
-        name: 'Floating Labels',
+        name: 'Inspection Report',
         url: '/forms/floating-labels'
       },
       {
-        name: 'Layout',
+        name: 'Gate Pass Report',
         url: '/forms/layout'
       },
       {
-        name: 'Validation',
+        name: 'Bin Card Report',
         url: '/forms/validation'
       }
     ]
@@ -185,29 +212,7 @@ export const navItems: INavData[] = [
   //     }
   //   ]
   // },
-  // {
-  //   name: 'Notifications',
-  //   url: '/notifications',
-  //   iconComponent: { name: 'cil-bell' },
-  //   children: [
-  //     {
-  //       name: 'Alerts',
-  //       url: '/notifications/alerts'
-  //     },
-  //     {
-  //       name: 'Badges',
-  //       url: '/notifications/badges'
-  //     },
-  //     {
-  //       name: 'Modal',
-  //       url: '/notifications/modal'
-  //     },
-  //     {
-  //       name: 'Toast',
-  //       url: '/notifications/toasts'
-  //     }
-  //   ]
-  // },
+ 
   // {
   //   name: 'Widgets',
   //   url: '/widgets',

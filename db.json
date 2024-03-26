@@ -1661,5 +1661,431 @@
       "remark": "Sell at a loss to attract customers",
       "id": 20
     }
+  ],
+  "userRole": [
+    {
+      "shortCode": "op",
+      "description": "Operate specified Data",
+      "role": "Operator",
+      "createdAt": "2024-03-26T02:37:35.636Z",
+      "id": 1
+    },
+    {
+      "shortCode": "admin",
+      "description": "Maintain all Data",
+      "role": "Admin",
+      "createdAt": "2024-03-26T02:37:59.770Z",
+      "id": 2
+    },
+    {
+      "shortCode": "engineer",
+      "description": "Engineer all Systems",
+      "role": "Engineer",
+      "createdAt": "2024-03-26T02:38:22.481Z",
+      "id": 3
+    },
+    {
+      "shortCode": "supervisor",
+      "description": "Supervise all Operations",
+      "role": "Supervisor",
+      "createdAt": "2024-03-26T02:38:41.092Z",
+      "id": 4
+    },
+    {
+      "shortCode": "controller",
+      "description": "Control all Processes",
+      "role": "Controller",
+      "createdAt": "2024-03-26T02:39:02.973Z",
+      "id": 5
+    },
+    {
+      "shortCode": "director",
+      "description": "Direct all Strategies",
+      "role": "Director",
+      "createdAt": "2024-03-26T02:39:23.637Z",
+      "id": 6
+    },
+    {
+      "shortCode": "guru",
+      "description": "Provide Expert Advice",
+      "role": "Guru",
+      "createdAt": "2024-03-26T02:39:44.311Z",
+      "id": 7
+    },
+    {
+      "shortCode": "mentor",
+      "description": "Mentor Team Members",
+      "role": "Mentor",
+      "createdAt": "2024-03-26T02:40:06.086Z",
+      "id": 8
+    },
+    {
+      "shortCode": "overseer",
+      "description": "Oversee all Activities",
+      "role": "Overseer",
+      "createdAt": "2024-03-26T02:40:26.742Z",
+      "id": 9
+    },
+    {
+      "shortCode": "chief",
+      "description": "Lead all Departments",
+      "role": "Chief",
+      "createdAt": "2024-03-26T02:40:48.389Z",
+      "id": 10
+    },
+    {
+      "shortCode": "strategist",
+      "description": "Strategize all Plans",
+      "role": "Strategist",
+      "createdAt": "2024-03-26T02:41:09.992Z",
+      "id": 11
+    },
+    {
+      "shortCode": "consultant",
+      "description": "Consult on all Matters",
+      "role": "Consultant",
+      "createdAt": "2024-03-26T02:41:30.679Z",
+      "id": 12
+    },
+    {
+      "shortCode": "manager",
+      "description": "Manage all Resources",
+      "role": "Manager",
+      "createdAt": "2024-03-26T02:41:51.263Z",
+      "id": 13
+    },
+    {
+      "shortCode": "advisor",
+      "description": "Advise on all Topics",
+      "role": "Advisor",
+      "createdAt": "2024-03-26T02:42:11.886Z",
+      "id": 14
+    },
+    {
+      "shortCode": "facilitator",
+      "description": "Facilitate all Processes",
+      "role": "Facilitator",
+      "createdAt": "2024-03-26T02:42:32.479Z",
+      "id": 15
+    },
+    {
+      "shortCode": "leader",
+      "description": "Lead all Teams",
+      "role": "Leader",
+      "createdAt": "2024-03-26T02:42:53.109Z",
+      "id": 16
+    },
+    {
+      "shortCode": "commander",
+      "description": "Command all Operations",
+      "role": "Commander",
+      "createdAt": "2024-03-26T02:43:13.713Z",
+      "id": 17
+    },
+    {
+      "shortCode": "expert",
+      "description": "Possess Expert Knowledge",
+      "role": "Expert",
+      "createdAt": "2024-03-26T02:43:34.348Z",
+      "id": 18
+    },
+    {
+      "shortCode": "strategist",
+      "description": "Strategize all Initiatives",
+      "role": "Strategist",
+      "createdAt": "2024-03-26T02:43:54.970Z",
+      "id": 19
+    },
+    {
+      "shortCode": "planner",
+      "description": "Plan all Activities",
+      "role": "Planner",
+      "createdAt": "2024-03-26T02:44:15.563Z",
+      "id": 20
+    },
+    {
+      "shortCode": "coordinator",
+      "description": "Coordinate all Tasks",
+      "role": "Coordinator",
+      "createdAt": "2024-03-26T02:44:36.202Z",
+      "id": 21
+    },
+    {
+      "shortCode": "strategist",
+      "description": "Devise Strategic Plans",
+      "role": "Strategist",
+      "createdAt": "2024-03-26T02:44:56.805Z",
+      "id": 22
+    }
+  ],
+  "designation": [
+    {
+      "shortCode": "SI",
+      "underDesignation": "Director",
+      "designation": "Store Incharge",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 1
+    },
+    {
+      "shortCode": "TM",
+      "underDesignation": "Telecoller",
+      "designation": "TeleCallingExecutive",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 2
+    },
+    {
+      "shortCode": "SV",
+      "underDesignation": "Supervisor",
+      "designation": "Supervisor",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 3
+    },
+    {
+      "shortCode": "DR",
+      "underDesignation": "Director",
+      "designation": "Director",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 4
+    },
+    {
+      "shortCode": "MG",
+      "underDesignation": "Managing",
+      "designation": "Managing",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 5
+    },
+    {
+      "shortCode": "OT",
+      "underDesignation": "Other",
+      "designation": "Other",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 6
+    },
+    {
+      "shortCode": "SI2",
+      "underDesignation": "Store Incharge",
+      "designation": "Store Incharge",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 7
+    },
+    {
+      "shortCode": "JV",
+      "underDesignation": "JV - Partner",
+      "designation": "JV - Partner",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 8
+    },
+    {
+      "shortCode": "RC",
+      "underDesignation": "Revenue Collector",
+      "designation": "Revenue Collector",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 9
+    },
+    {
+      "shortCode": "TE",
+      "underDesignation": "TeleCallingExecutive",
+      "designation": "TeleCallingExecutive",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 10
+    },
+    {
+      "shortCode": "TN",
+      "underDesignation": "Technician",
+      "designation": "Technician",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 11
+    },
+    {
+      "shortCode": "EM",
+      "underDesignation": "Employee",
+      "designation": "Employee",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 12
+    },
+    {
+      "shortCode": "TM2",
+      "underDesignation": "Telecoller",
+      "designation": "TeleCallingExecutive",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 13
+    },
+    {
+      "shortCode": "SV2",
+      "underDesignation": "Supervisor",
+      "designation": "Supervisor",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 14
+    },
+    {
+      "shortCode": "DR2",
+      "underDesignation": "Director",
+      "designation": "Director",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 15
+    },
+    {
+      "shortCode": "MG2",
+      "underDesignation": "Managing",
+      "designation": "Managing",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 16
+    },
+    {
+      "shortCode": "OT2",
+      "underDesignation": "Other",
+      "designation": "Other",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 17
+    },
+    {
+      "shortCode": "SI3",
+      "underDesignation": "Store Incharge",
+      "designation": "Store Incharge",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 18
+    },
+    {
+      "shortCode": "JV2",
+      "underDesignation": "JV - Partner",
+      "designation": "JV - Partner",
+      "createdAt": "2024-03-26T03:35:35.086Z",
+      "id": 19
+    },
+    {
+      "shortCode": "RC2",
+      "underDesignation": "Managing",
+      "designation": "Revenue Collector",
+      "createdAt": "2024-03-26T03:39:03.504Z",
+      "id": 20
+    }
+  ],
+  "userDepartment": [
+    {
+      "shortCode": "005",
+      "deptDetails": "Bussiness",
+      "createdAt": "2024-03-26T04:16:32.755Z",
+      "id": 1
+    },
+    {
+      "shortCode": "006",
+      "deptDetails": "Operations",
+      "createdAt": "2024-03-26T04:20:42.123Z",
+      "id": 2
+    },
+    {
+      "shortCode": "007",
+      "deptDetails": "Finance",
+      "createdAt": "2024-03-26T04:21:54.589Z",
+      "id": 3
+    },
+    {
+      "shortCode": "008",
+      "deptDetails": "Human Resources",
+      "createdAt": "2024-03-26T04:23:07.895Z",
+      "id": 4
+    },
+    {
+      "shortCode": "009",
+      "deptDetails": "Marketing",
+      "createdAt": "2024-03-26T04:24:18.172Z",
+      "id": 5
+    },
+    {
+      "shortCode": "010",
+      "deptDetails": "Customer Service",
+      "createdAt": "2024-03-26T04:25:33.421Z",
+      "id": 6
+    },
+    {
+      "shortCode": "011",
+      "deptDetails": "Information Technology",
+      "createdAt": "2024-03-26T04:26:47.781Z",
+      "id": 7
+    },
+    {
+      "shortCode": "012",
+      "deptDetails": "Sales",
+      "createdAt": "2024-03-26T04:28:01.124Z",
+      "id": 8
+    },
+    {
+      "shortCode": "013",
+      "deptDetails": "Research and Development",
+      "createdAt": "2024-03-26T04:29:15.476Z",
+      "id": 9
+    },
+    {
+      "shortCode": "014",
+      "deptDetails": "Legal",
+      "createdAt": "2024-03-26T04:30:28.837Z",
+      "id": 10
+    },
+    {
+      "shortCode": "015",
+      "deptDetails": "Supply Chain",
+      "createdAt": "2024-03-26T04:31:42.214Z",
+      "id": 11
+    },
+    {
+      "shortCode": "016",
+      "deptDetails": "Quality Assurance",
+      "createdAt": "2024-03-26T04:32:55.587Z",
+      "id": 12
+    },
+    {
+      "shortCode": "017",
+      "deptDetails": "Facilities Management",
+      "createdAt": "2024-03-26T04:34:09.968Z",
+      "id": 13
+    },
+    {
+      "shortCode": "018",
+      "deptDetails": "Training and Development",
+      "createdAt": "2024-03-26T04:35:24.345Z",
+      "id": 14
+    },
+    {
+      "shortCode": "019",
+      "deptDetails": "Public Relations",
+      "createdAt": "2024-03-26T04:36:38.722Z",
+      "id": 15
+    },
+    {
+      "shortCode": "020",
+      "deptDetails": "Administration",
+      "createdAt": "2024-03-26T04:37:53.099Z",
+      "id": 16
+    },
+    {
+      "shortCode": "021",
+      "deptDetails": "Internal Audit",
+      "createdAt": "2024-03-26T04:39:07.487Z",
+      "id": 17
+    },
+    {
+      "shortCode": "022",
+      "deptDetails": "Compliance",
+      "createdAt": "2024-03-26T04:40:21.874Z",
+      "id": 18
+    },
+    {
+      "shortCode": "023",
+      "deptDetails": "Product Management",
+      "createdAt": "2024-03-26T04:41:36.261Z",
+      "id": 19
+    },
+    {
+      "shortCode": "024",
+      "deptDetails": "Risk Management",
+      "createdAt": "2024-03-26T04:42:50.646Z",
+      "id": 20
+    },
+    {
+      "shortCode": "025",
+      "deptDetails": "Procurement",
+      "createdAt": "2024-03-26T04:44:05.031Z",
+      "id": 21
+    }
   ]
 }
