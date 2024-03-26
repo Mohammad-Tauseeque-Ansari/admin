@@ -1247,5 +1247,419 @@
       "createdAt": "2024-03-22T16:55:44.234Z",
       "id": 19
     }
+  ],
+  "contracter": [
+    {
+      "contracterName": "PALASGAON AMDI",
+      "address1": "PALASGAON , NAGPUR",
+      "address2": "CHARGAON, UMRED",
+      "mobile": "8596563232",
+      "remark": "ROAD CONSTRUCTION WORK",
+      "id": 1
+    },
+    {
+      "contracterName": "XYZ Construction",
+      "address1": "ABC Street",
+      "address2": "DEF Avenue",
+      "mobile": "1234567890",
+      "remark": "Building Renovation",
+      "id": 2
+    },
+    {
+      "contracterName": "ABC Builders",
+      "address1": "123 Main Street",
+      "address2": "456 Side Road",
+      "mobile": "0987654321",
+      "remark": "New Home Construction",
+      "id": 3
+    },
+    {
+      "contracterName": "Smith & Sons",
+      "address1": "789 Elm Avenue",
+      "address2": "101 Oak Lane",
+      "mobile": "5551234567",
+      "remark": "Plumbing Services",
+      "id": 4
+    },
+    {
+      "contracterName": "Johnson Construction",
+      "address1": "202 Maple Street",
+      "address2": "303 Pine Boulevard",
+      "mobile": "7779876543",
+      "remark": "Bridge Repair",
+      "id": 5
+    },
+    {
+      "contracterName": "Green Landscaping",
+      "address1": "404 Cedar Road",
+      "address2": "505 Birch Lane",
+      "mobile": "6667890123",
+      "remark": "Park Beautification",
+      "id": 6
+    },
+    {
+      "contracterName": "ABC Roofing",
+      "address1": "606 Pine Street",
+      "address2": "707 Oak Avenue",
+      "mobile": "2224567890",
+      "remark": "Roof Replacement",
+      "id": 7
+    },
+    {
+      "contracterName": "Sunrise Painting",
+      "address1": "808 Spruce Boulevard",
+      "address2": "909 Walnut Lane",
+      "mobile": "3339876543",
+      "remark": "House Painting",
+      "id": 8
+    },
+    {
+      "contracterName": "Concrete Masters",
+      "address1": "1010 Maple Road",
+      "address2": "1111 Pine Lane",
+      "mobile": "4447890123",
+      "remark": "Concrete Repair",
+      "id": 9
+    },
+    {
+      "contracterName": "ABC Electrical",
+      "address1": "1212 Elm Street",
+      "address2": "1313 Oak Avenue",
+      "mobile": "8881234567",
+      "remark": "Electrical Wiring",
+      "id": 10
+    },
+    {
+      "contracterName": "XYZ Plumbing",
+      "address1": "1414 Cedar Road",
+      "address2": "1515 Birch Lane",
+      "mobile": "9996543210",
+      "remark": "Plumbing Installation",
+      "id": 11
+    },
+    {
+      "contracterName": "Bright Ideas Solar",
+      "address1": "1616 Pine Street",
+      "address2": "1717 Oak Avenue",
+      "mobile": "7772223333",
+      "remark": "Solar Panel Installation",
+      "id": 12
+    },
+    {
+      "contracterName": "ABC HVAC",
+      "address1": "1818 Elm Road",
+      "address2": "1919 Maple Lane",
+      "mobile": "1118889999",
+      "remark": "HVAC System Installation",
+      "id": 13
+    },
+    {
+      "contracterName": "City Scape Landscaping",
+      "address1": "2020 Cedar Street",
+      "address2": "2121 Birch Avenue",
+      "mobile": "5554443333",
+      "remark": "Urban Greening Project",
+      "id": 14
+    },
+    {
+      "contracterName": "ABC Demolition",
+      "address1": "2222 Pine Road",
+      "address2": "2323 Oak Lane",
+      "mobile": "9991112222",
+      "remark": "Building Demolition",
+      "id": 15
+    },
+    {
+      "contracterName": "XYZ Paving",
+      "address1": "2424 Elm Street",
+      "address2": "2525 Maple Avenue",
+      "mobile": "6663339999",
+      "remark": "Driveway Paving",
+      "id": 16
+    },
+    {
+      "contracterName": "ABC Carpentry",
+      "address1": "2626 Cedar Road",
+      "address2": "2727 Birch Lane",
+      "mobile": "3336669999",
+      "remark": "Carpentry Services",
+      "id": 17
+    },
+    {
+      "contracterName": "Green Thumb Gardening",
+      "address1": "2828 Pine Boulevard",
+      "address2": "2929 Oak Lane",
+      "mobile": "7778889999",
+      "remark": "Garden Design",
+      "id": 18
+    },
+    {
+      "contracterName": "ABC Security Systems",
+      "address1": "3030 Elm Street",
+      "address2": "3131 Maple Avenue",
+      "mobile": "1112223333",
+      "remark": "Security System Installation",
+      "id": 19
+    },
+    {
+      "contracterName": "ABC Flooring",
+      "address1": "3232 Cedar Road",
+      "address2": "3333 Birch Lane",
+      "mobile": "4445556666",
+      "remark": "Flooring Installation",
+      "id": 20
+    }
+  ],
+  "jobContracter": [
+    {
+      "jobSelect": "ELECTRIC WORK",
+      "jobContracter": "ABC Demolition",
+      "startDate": "2024-03-12",
+      "endDate": "2024-03-31",
+      "remark": "Electric Fitting Work",
+      "id": 1
+    },
+    {
+      "jobSelect": "ELECTRIC WORK",
+      "jobContracter": "PALASGAON AMDI",
+      "startDate": "2024-04-05",
+      "endDate": "2024-04-20",
+      "remark": "Wiring and installation  ",
+      "id": 2
+    },
+    {
+      "jobSelect": "Plumbing",
+      "jobContracter": "XYZ Construction",
+      "startDate": "2024-04-10",
+      "endDate": "2024-04-25",
+      "remark": "Repairing leaky pipes  ",
+      "id": 3
+    },
+    {
+      "jobSelect": "Landscaping",
+      "jobContracter": "Green Landscaping",
+      "startDate": "2024-04-15",
+      "endDate": "2024-04-30",
+      "remark": "Mowing lawns, trimming hedges ",
+      "id": 4
+    },
+    {
+      "jobSelect": "Painting",
+      "jobContracter": "Sunrise Painting",
+      "startDate": "2024-04-20",
+      "endDate": "2024-05-05",
+      "remark": "Interior and exterior painting  ",
+      "id": 5
+    },
+    {
+      "jobSelect": "Carpentry",
+      "jobContracter": "ABC Builders",
+      "startDate": "2024-04-25",
+      "endDate": "2024-05-10",
+      "remark": "Building custom cabinets and furniture",
+      "id": 6
+    },
+    {
+      "jobSelect": "Roofing",
+      "jobContracter": "ABC Roofing",
+      "startDate": "2024-04-30",
+      "endDate": "2024-05-15",
+      "remark": "Repairing and replacing damaged roofs",
+      "id": 7
+    },
+    {
+      "jobSelect": "HVAC",
+      "jobContracter": "ABC HVAC",
+      "startDate": "2024-05-05",
+      "endDate": "2024-05-20",
+      "remark": "Installation and maintenance of heating ",
+      "id": 8
+    },
+    {
+      "jobSelect": "Tiling",
+      "jobContracter": "Concrete Masters",
+      "startDate": "2024-05-10",
+      "endDate": "2024-05-25",
+      "remark": "Installing tiles in kitchens etc",
+      "id": 9
+    },
+    {
+      "jobSelect": "Drywall",
+      "jobContracter": "ABC Builders",
+      "startDate": "2024-05-15",
+      "endDate": "2024-05-30",
+      "remark": "Hanging and finishing  ",
+      "id": 10
+    },
+    {
+      "jobSelect": "Fencing",
+      "jobContracter": "ABC Builders",
+      "startDate": "2024-05-20",
+      "endDate": "2024-06-05",
+      "remark": "Installing and repairing fences  ",
+      "id": 11
+    }
+  ],
+  "taxDiscount": [
+    {
+      "tName": "IGST",
+      "type": "Tax",
+      "tdFor": "Addition",
+      "createdAt": null,
+      "remark": "B2B",
+      "id": 1
+    },
+    {
+      "tName": "CGST",
+      "type": "Tax",
+      "tdFor": "Local Sales",
+      "createdAt": null,
+      "remark": "B2C",
+      "id": 2
+    },
+    {
+      "tName": "SGST",
+      "type": "Tax",
+      "tdFor": "Intra-state Transactions",
+      "createdAt": null,
+      "remark": "State-specific",
+      "id": 3
+    },
+    {
+      "tName": "VAT",
+      "type": "Tax",
+      "tdFor": "Value Added",
+      "createdAt": null,
+      "remark": "Goods sold within the state",
+      "id": 4
+    },
+    {
+      "tName": "Excise Duty",
+      "type": "Tax",
+      "tdFor": "Manufacturing",
+      "createdAt": null,
+      "remark": "Alcohol and Tobacco",
+      "id": 5
+    },
+    {
+      "tName": "Service Tax",
+      "type": "Tax",
+      "tdFor": "Services",
+      "createdAt": null,
+      "remark": "B2B and B2C services",
+      "id": 6
+    },
+    {
+      "tName": "Customs Duty",
+      "type": "Tax",
+      "tdFor": "Import/Export",
+      "createdAt": null,
+      "remark": "International trade",
+      "id": 7
+    },
+    {
+      "tName": "Income Tax",
+      "type": "Tax",
+      "tdFor": "Income",
+      "createdAt": null,
+      "remark": "Individual and corporate",
+      "id": 8
+    },
+    {
+      "tName": "Sales Discount",
+      "type": "Discount",
+      "tdFor": "Product Sales",
+      "createdAt": null,
+      "remark": "Seasonal promotion",
+      "id": 9
+    },
+    {
+      "tName": "Bulk Purchase Discount",
+      "type": "Discount",
+      "tdFor": "Large Orders",
+      "createdAt": null,
+      "remark": "Encourage bulk purchases",
+      "id": 10
+    },
+    {
+      "tName": "Early Payment Discount",
+      "type": "Discount",
+      "tdFor": "Invoices",
+      "createdAt": null,
+      "remark": "Prompt payment incentive",
+      "id": 11
+    },
+    {
+      "tName": "Cash Discount",
+      "type": "Discount",
+      "tdFor": "Cash Sales",
+      "createdAt": null,
+      "remark": "Encourage cash transactions",
+      "id": 12
+    },
+    {
+      "tName": "Trade Discount",
+      "type": "Discount",
+      "tdFor": "Wholesale Transactions",
+      "createdAt": null,
+      "remark": "Offered to traders",
+      "id": 13
+    },
+    {
+      "tName": "Volume Discount",
+      "type": "Discount",
+      "tdFor": "Large Quantity Purchases",
+      "createdAt": null,
+      "remark": "Discount based on order volume",
+      "id": 14
+    },
+    {
+      "tName": "Employee Discount",
+      "type": "Discount",
+      "tdFor": "Staff Purchases",
+      "createdAt": null,
+      "remark": "Employee benefit program",
+      "id": 15
+    },
+    {
+      "tName": "Clearance Discount",
+      "type": "Discount",
+      "tdFor": "Obsolete Inventory",
+      "createdAt": null,
+      "remark": "Clear out old stock",
+      "id": 16
+    },
+    {
+      "tName": "Seasonal Discount",
+      "type": "Discount",
+      "tdFor": "Seasonal Products",
+      "createdAt": null,
+      "remark": "Adjust pricing based on season",
+      "id": 17
+    },
+    {
+      "tName": "Promotional Discount",
+      "type": "Discount",
+      "tdFor": "Promotional Events",
+      "createdAt": null,
+      "remark": "Attract customers during promotions",
+      "id": 18
+    },
+    {
+      "tName": "Special Discount",
+      "type": "Discount",
+      "tdFor": "Selected Customers",
+      "createdAt": null,
+      "remark": "Offered to preferred customers",
+      "id": 19
+    },
+    {
+      "tName": "Loss Leader Pricing",
+      "type": "Discount",
+      "tdFor": "Strategic Products",
+      "createdAt": null,
+      "remark": "Sell at a loss to attract customers",
+      "id": 20
+    }
   ]
 }

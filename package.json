@@ -37,11 +37,13 @@
     "@coreui/utils": "^2.0.2",
     "bootstrap": "^5.3.3",
     "chart.js": "^3.9.1",
+    "file-saver": "^2.0.5",
     "jquery": "^3.7.1",
     "lodash-es": "^4.17.21",
     "ngx-scrollbar": "^13.0.3",
     "rxjs": "~7.8.1",
     "tslib": "^2.3.0",
+    "xlsx": "^0.18.5",
     "zone.js": "~0.13.1"
   },
   "devDependencies": {
@@ -49,6 +51,7 @@
     "@angular/cli": "^16.2.7",
     "@angular/compiler-cli": "^16.2.10",
     "@angular/localize": "^16.2.10",
+    "@types/file-saver": "^2.0.7",
     "@types/jasmine": "^5.1.1",
     "@types/lodash-es": "^4.17.10",
     "@types/node": "^18.18.6",

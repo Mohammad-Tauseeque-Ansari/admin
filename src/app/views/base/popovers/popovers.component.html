@@ -1,69 +1,219 @@
-<c-row ngPreserveWhitespaces>
-  <c-col xs="12">
-    <app-docs-callout href="components/popover" name="Popover"></app-docs-callout>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header>
-        <strong>Angular Popover</strong> <small>Basic example</small>
-      </c-card-header>
-      <c-card-body>
-        <app-docs-example href="components/popover">
-          <button [cPopover]="popoverHtml"
-                  cPopoverPlacement="right"
-                  [cPopoverTrigger]="'click'"
-                  [cPopoverVisible]="visible"
-                  cButton
-                  class="m-1"
-                  color="danger"
-                  size="lg">
-            Click to toggle popover
-            <ng-template #popoverHtml>
-              <h3 class="popover-header">
-                Popover Title
-              </h3>
-              <div class="popover-body">
-                And here’s some amazing content. It’s very engaging. Right?
+<div class="container">
+    <h3>Tax Discount </h3>
+   </div>
+  
+   <div class="container my-3 ">
+    <div class="row">
+        <div class="col-md-4">
+            <button
+            (click)="onAdd()"
+            class="btn btn-dark btn-no-border"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Add Tax Discount
+          </button> 
+        </div>
+        <div class="col-md-4">
+             
+        </div>
+        <div class="col-md-4">
+          <nav aria-label="Page navigation"  >
+            <ul class="pagination justify-content-end">
+              <li class="page-item " [class.disabled]="currentPage === 1">
+                <a class="page-link text-dark "  (click)="setPage(currentPage - 1)">Previous</a>
+              </li>
+              <li class="page-item " *ngFor="let page of pages" [class.active]="page === currentPage">
+                <a class="page-link" (click)="setPage(page)">{{ page }}</a>
+              </li>
+              <li class="page-item" [class.disabled]="currentPage === totalPages">
+                <a class="page-link text-dark" (click)="setPage(currentPage + 1)">Next</a>
+              </li>
+            </ul>
+          </nav>
+            <!-- <input type="text" class="form-control" placeholder="Search Item" [(ngModel)]="searchTerm" (input)="filterSuppliers()"> -->
+    </div>
+    </div>
+    
+  </div>
+   
+  
+   
+  
+  <div class="main">
+    <section class="dashboard mt-3">
+      <div class="container">
+      
+        <table class="table table-responsive table-bordered">
+          <thead>
+            <tr class="table-dark">
+              <th>Sr.No.</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>T.D For</th>
+              <th>Remark</th>
+  
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-striped" *ngFor="let row of paginatedTaxDiscountData">
+              <td>{{ row.id }}</td>
+              <td>{{ row.tName }}</td>
+              <td>{{ row.type }}</td>
+              <td>{{ row.tdFor }}</td>
+              <td>{{ row.remark  }}</td>
+            
+  
+              <td class="text-center">
+                <button
+                  (click)="onEdit(row)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  class="btn btn-sm btn-success mx-1"
+                >
+                  Edit
+                </button>
+                <button
+                  (click)="deleteTaxDiscount(row)"
+                  class="btn btn-sm btn-danger"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg">
+      <!-- Use modal-lg class to make the modal larger -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Tax Discount Form
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="taxDiscountForm">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="mb-3">
+                  <label for="companyName" class="form-label"
+                    > Tax/Discount Name <span class="text-danger">*</span> :</label
+                  >
+                  <input
+                    type="text"
+                    formControlName="tName"
+                    class="form-control rounded-0"
+                    id="companyName"
+                    name="companyName"
+                  />
+                </div>
               </div>
-            </ng-template>
-          </button>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header>
-        <strong>Angular Popover</strong> <small>Four directions</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Four options are available: top, right, bottom, and left aligned.
-        </p>
-        <app-docs-example href="components/popover#four-directions">
-          <button [cPopoverTrigger]="'hover'" cButton [cPopover]="tooltipHtml"
-                  cPopoverPlacement="top" class="me-1"
-                  color="secondary">Popover on top
-            <ng-template #tooltipHtml>
-              <div class="popover-body">
-                Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Top!
+              <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="companyName" class="form-label"
+                      >Select Type <span class="text-danger">*</span> :</label
+                    >
+                    <select
+                      class="form-select rounded-0"
+                      placeholder="select"
+                      formControlName="type"
+                    >
+                      <option value="" disabled selected>Select Type <span class="text-danger">*</span></option>
+                      <option value="Tax">Tax</option>
+                      <option value="Discount">Discount</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
               </div>
-            </ng-template>
+              <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="companyName" class="form-label"
+                      >Select T.D For <span class="text-danger">*</span> :</label
+                    >
+                    <select
+                      class="form-select rounded-0"
+                      placeholder="select"
+                      formControlName="tdFor"
+                    >
+                      <option value="" disabled selected>Select T.D For <span class="text-danger">*</span></option>
+                       
+                      <option value="Addition">Addition</option>
+                      <option value="Substraction">Subtraction</option>
+                    </select>
+                  </div>
+              </div>
+              
+               
+            </div>
+            <div class="row">
+              
+              <div class="col-md-4">
+                <div class="mb-3">
+                  <label for="companyName" class="form-label"
+                    > Remark :</label>
+                  <input
+                    type="text"
+                    formControlName="remark"
+                    class="form-control rounded-0"
+                    id="address1"
+                    name="industry"
+                  />
+                </div>
+              </div>
+           
+               
+            </div>
+            <!-- Add similar rows and columns as needed for additional fields -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            id="cancel"
+            (click)="onClose()"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
           </button>
-          <button [cPopoverTrigger]="'hover'" cButton cPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Right!"
-                  cPopoverPlacement="right"
-                  class="me-1" color="secondary">Popover on right
+          <!-- <button type="button" class="btn btn-dark text-white">Add Department</button> -->
+          <button
+            type="submit"
+            *ngIf="showAdd"
+            (click)="addNewData()"
+            class="btn btn-dark"
+          >
+            Add Tax Discount
           </button>
-          <button [cPopoverTrigger]="'hover'" cButton cPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Bottom!"
-                  cPopoverPlacement="bottom"
-                  class="me-1" color="secondary">Popover on bottom
+          <button
+            type="submit"
+            (click)="updateTaxDisount()"
+            *ngIf="showUpdate"
+            class="btn btn-dark"
+          >
+            Update Tax Discount
           </button>
-          <button [cPopoverTrigger]="'hover'" cButton cPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Left!"
-                  cPopoverPlacement="left" class="me-1"
-                  color="secondary">Popover on left
-          </button>
-        </app-docs-example>
-      </c-card-body>
-    </c-card>
-  </c-col>
-</c-row>
+        </div>
+      </div>
+    </div>
+  </div>
+  

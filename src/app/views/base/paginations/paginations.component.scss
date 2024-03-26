@@ -1,0 +1,64 @@
+.table {
+    font-size: 13px; /* Adjust the font size as per your preference */
+   
+  }
+  .btn-no-border{
+ border-radius: 0%;
+ margin: 0px ;
+ font-size: 14px;
+  }
+
+  .btn-sm {
+    padding: 0.15rem 0.5rem; /* Adjust padding as per your preference */
+    font-size: 12px; /* Adjust font size as per your preference */
+  }
+  
+
+  .form-control {
+    font-size: 14px; /* Adjust the font size as per your preference */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  label{
+    font-weight: 500;
+  }
+
+  .suppform {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .modal-fullscreen {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .suppform .row {
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+   
+  .modal-header {
+    background-color: #a5a5a5;
+    color: #ffffff;
+    border-bottom: none;
+  }
+ 
+   .page-link{
+    cursor: pointer !important;
+    font-size: 14px !important;
+    border-radius: 0 !important;
+    color: black;
+   }
+
+   
+   .page-item.active .page-link {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* Light text color */
+    border: none;
+}
+
+
+ 
